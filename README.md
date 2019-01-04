@@ -1,3 +1,9 @@
+# Treehouse Portfolio (rebuilt with React)
+
+Use React to recreate my Treehouse portfolio project previously built with Node.js & Express
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
