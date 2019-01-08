@@ -1,3 +1,13 @@
+/*============-============-============-============
+                         VARIABLES
+==============-============-============-==========*/
+
+:root {
+  --color-primary: #323639;
+  --color-primary-darker: #333;
+  --color-white: #fff;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,49 +16,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #323639;
-  /* background-color: #2c3e50; */
-  /* scrollbar-width: none; */
+  background-color: var(--color-primary);
 }
 
 body::-webkit-scrollbar { 
   display: none;
 }
 
-header {
+/*============-============-============-============
+                        GLOBAL
+==============-============-============-==========*/
+
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*============-============-============-============
+                        LANDING PAGE
+==============-============-============-==========*/
+
+header {
   min-height: 100vh;
+  position: relative;
 }
 
 .header-main {
   color: #fff;
   margin-bottom: 5rem;
+  padding: 0 1rem;
 }
 
 .header-main h1 {
   font-size: 3.4rem;
+  text-align: center;
+}
+
+h1.logo span {
+  display: table;
 }
 
 .tagline {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .social-icons {
   text-align: center;
-}
-
-.social-icon {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  background-color: #fff;
+  margin-bottom: 3.5rem;
 }
 
 .social-icon + .social-icon {
-  margin-left: 1rem;
+  margin-left: 2.2rem;
+}
+
+.social-icon svg {
+  color: var(--color-white);
+  transition: transform .3s ease-out;
+  font-size: 2.4rem;
+}
+
+.social-icon svg:hover {
+  transform: scale(1.15);
+}
+
+.button-group button {
+  position: relative;
+  background-color: #333;
+  color: var(--color-white);
+  width: 150px;
+  height: 150px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 4px;
+  overflow: hidden;
+  outline: none;
+  opacity: 1;
+  transition: all .3s ease-out;
+}
+
+.button-group button:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+  transform: scale(1.05);
+  opacity: .7;
+}
+
+button + button {
+  margin-left: 1.3rem;
+}
+
+i {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 1%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,0.85) 50%,rgba(255,255,255,0.85) 70%,rgba(255,255,255,0.85) 71%,rgba(255,255,255,0) 100%);
+  width: 50%;
+  height: 100%;
+  transform: skew(30deg,0deg);
+  animation: move 12s infinite;
+}
+
+.btn2 {
+  animation-delay: 6s;
+}
+
+@keyframes move {
+	0%  { left: -40%; opacity: 0; }
+	1% {opacity: 0}
+	5% {opacity: 0.05}
+	8% {opacity: 0}
+  14% { left: 140%;}
+}
+
+/*============-============-============-============
+                      MEDIA QUERIES
+==============-============-============-==========*/
+
+@media (min-width: 741px ) {
+  h1.logo span {
+    display: inline-block;
+  }
 }
