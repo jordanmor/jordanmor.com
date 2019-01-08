@@ -38,14 +38,16 @@ body::-webkit-scrollbar {
 ==============-============-============-==========*/
 
 header {
+  /* display: flex;
+  justify-content: center; */
   min-height: 100vh;
   position: relative;
 }
 
 .header-main {
   color: #fff;
-  margin-bottom: 5rem;
   padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .header-main h1 {
@@ -55,6 +57,7 @@ header {
 
 h1.logo span {
   display: table;
+  margin: 0 auto;
 }
 
 .tagline {
@@ -91,6 +94,7 @@ h1.logo span {
   font-size: 1.6rem;
   font-weight: bold;
   border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
   overflow: hidden;
   outline: none;
   opacity: 1;
@@ -136,6 +140,12 @@ i {
 /*============-============-============-============
                       MEDIA QUERIES
 ==============-============-============-==========*/
+
+@media (max-width: 740px ) {
+  header {
+    margin-top: 5rem;
+  }
+}
 
 @media (min-width: 741px ) {
   h1.logo span {
