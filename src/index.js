@@ -4,6 +4,7 @@ import { Provider } from './components/Context';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
+import './background.css';
 
 ReactDOM.render(
 <Provider>
