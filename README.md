@@ -1,5 +1,5 @@
-# Jordan Mor Portolio Site
+# Jordan Mor's Portolio Site
 
 My personal portfolio site built with React, CSS Grid & Flexbox.
 
-http://jordanmor.com
+http://www.jordanmor.com
