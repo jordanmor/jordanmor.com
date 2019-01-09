@@ -9,7 +9,7 @@ const Header = () => {
         return ( 
           <header className={ menuIsOpen ? "header open" : "header" }>
             <div className="logo">
-              <Link to="/">
+              <Link to="/" onClick={ actions.closeMenu }>
                 <h1>Jordan Mor</h1>
               </Link>
             </div>
@@ -17,9 +17,9 @@ const Header = () => {
               <span className="menu-lines"></span>
             </button>
             <nav>
-              <NavLink to="/portfolio">Portfolio</NavLink>
-              <NavLink to="/about">About Me</NavLink>
-              <NavLink to="/contact">Contact Me</NavLink>
+              <NavLink onClick={ actions.closeMenu } to="/portfolio">Portfolio</NavLink>
+              <NavLink onClick={ actions.closeMenu } to="/about">About Me</NavLink>
+              <NavLink onClick={ actions.closeMenu } to="/contact">Contact Me</NavLink>
             </nav>
           </header>
         );

@@ -12,13 +12,18 @@ export class Provider extends Component {
     this.setState( prevState => ({menuIsOpen: !prevState.menuIsOpen }));
   }
 
+  closeMenu = () => {
+    this.setState({ menuIsOpen: false });
+  }
+
   render() { 
     return ( 
       <PortfolioContext.Provider value={{
         projects: this.state.projects,
         menuIsOpen: this.state.menuIsOpen,
         actions: {
-          toggleMenu: this.toggleMenu
+          toggleMenu: this.toggleMenu,
+          closeMenu: this.closeMenu
         }
       }}>
         { this.props.children }
