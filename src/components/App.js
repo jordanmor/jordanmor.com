@@ -13,7 +13,7 @@ import {
   TransitionGroup,
 } from 'react-transition-group';
 
-library.add(fab);
+library.add(fab); // make font-awesome brand icons available to components
 
 const App = ({ location }) => {
   return (
@@ -21,7 +21,7 @@ const App = ({ location }) => {
       <Background />
       <Header path={location.pathname} />
       <Route render={({location}) => (
-        <TransitionGroup>
+        <TransitionGroup component={null}>
           <CSSTransition
             key={location.key}
             timeout={1200}
