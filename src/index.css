@@ -23,6 +23,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*============-============-============-============
                         GLOBAL
 ==============-============-============-==========*/
@@ -37,30 +41,28 @@ body::-webkit-scrollbar {
                         LANDING PAGE
 ==============-============-============-==========*/
 
-header {
-  /* display: flex;
-  justify-content: center; */
+.landing {
   min-height: 100vh;
   position: relative;
 }
 
-.header-main {
+.landing .container {
   color: #fff;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
-.header-main h1 {
+.landing h1 {
   font-size: 3.4rem;
   text-align: center;
 }
 
-h1.logo span {
+.landing .title span {
   display: table;
   margin: 0 auto;
 }
 
-.tagline {
+.landing .tagline {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -85,7 +87,7 @@ h1.logo span {
   transform: scale(1.15);
 }
 
-.button-group button {
+.landing .btn {
   position: relative;
   background-color: #333;
   color: var(--color-white);
@@ -101,7 +103,7 @@ h1.logo span {
   transition: all .3s ease-out;
 }
 
-.button-group button:hover {
+.landing .btn:hover {
   background-color: var(--color-white);
   color: var(--color-primary-darker);
   border-color: var(--color-primary-darker);
@@ -109,11 +111,11 @@ h1.logo span {
   opacity: .7;
 }
 
-button + button {
+.landing .btn + .btn {
   margin-left: 1.3rem;
 }
 
-i {
+.shine {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -125,7 +127,7 @@ i {
   animation: move 12s infinite;
 }
 
-.btn2 {
+.shine.two {
   animation-delay: 6s;
 }
 
@@ -138,17 +140,156 @@ i {
 }
 
 /*============-============-============-============
+                        HEADER
+==============-============-============-==========*/
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  min-height: 40px;
+  color: var(--color-white);
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.header .logo {
+  z-index: 30;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.header .logo h1 {
+  /* font-family: 'Cinzel Decorative', cursive; */
+  font-family: 'Cinzel', serif;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* -- Nav -- */
+
+.header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  height: 0;
+  font-family: 'Cinzel', serif;
+  background-color: hsla(0,0%,0%,0.1);
+  overflow: hidden;
+  transition: height 500ms;
+  will-change: height;
+}
+
+.header.open nav {
+  height: 40px;
+}
+
+.header nav a {
+  display: inline-block;
+}
+
+.header a {
+  color: var(--color-white);
+}
+
+/* -- Header Hamburger Menu -- */
+
+.header .nav-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 30;
+  height: 25px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header .menu-lines,
+.header .menu-lines::before,
+.header .menu-lines::after {
+  display: block;
+  position: relative;
+  width: 23px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: white;
+  transition-delay: 200ms;
+}
+
+.header .menu-lines::before,
+.header .menu-lines::after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  content: "";
+  transition: transform 200ms,top 200ms 400ms;
+}
+
+.header .menu-lines::before {
+  top: -7px;
+}
+
+.header .menu-lines::after {
+  top: 7px;
+}
+
+/* Menu Open */
+
+.header.open .menu-lines {
+  background-color: transparent;
+}
+
+.header.open .menu-lines::before, 
+.header.open .menu-lines::after {
+  top: 0;
+  transition: transform 200ms 400ms,top 200ms;
+}
+
+.header.open .menu-lines::before {
+  transform: rotateZ(45deg);
+}
+
+.header.open .menu-lines::after {
+  transform: rotateZ(-45deg);
+}
+
+/*============-============-============-============
+                        MAIN
+==============-============-============-==========*/
+
+.portfolio,
+.about,
+.contact {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  font-size: .8rem;
+  font-weight: normal;
+  font-family: 'Cinzel', serif;
+  color: #fff;
+  padding-top: 4.2rem;
+}
+
+/*============-============-============-============
                       MEDIA QUERIES
 ==============-============-============-==========*/
 
 @media (max-width: 740px ) {
-  header {
+  .landing {
     margin-top: 5rem;
   }
 }
 
 @media (min-width: 741px ) {
-  h1.logo span {
+  .landing .logo span {
     display: inline-block;
   }
 }
