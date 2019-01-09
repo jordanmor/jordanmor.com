@@ -143,6 +143,16 @@ a {
                         HEADER
 ==============-============-============-==========*/
 
+.header-wrapper-in {
+  opacity: 1;
+  transition: all .4s ease-out .9s;
+}
+
+.header-wrapper-out {
+  opacity: 0;
+  transition: all .4s ease-out;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -275,7 +285,46 @@ a {
   font-weight: normal;
   font-family: 'Cinzel', serif;
   color: #fff;
-  padding-top: 4.2rem;
+  padding-top: 4.3rem;
+}
+
+/*============-============-============-============
+                  PAGE TRANSITIONS
+==============-============-============-==========*/
+
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* simple - enter transition 300ms, exit 150ms */
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 900ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
 
 /*============-============-============-============

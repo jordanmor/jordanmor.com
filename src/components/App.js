@@ -1,25 +1,43 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { withRouter, Switch, Route } from 'react-router-dom';
 import Background from './background';
 import Landing from './landing';
-import MainComponents from './mainComponents';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import Header from './Header';
+import Portfolio from './Portfolio';
+import About from './About';
+import Contact from './contact';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import {
+  CSSTransition,
+  TransitionGroup,
+} from 'react-transition-group';
 
 library.add(fab);
 
-const App = () => {
+const App = ({ location }) => {
   return (
-    <BrowserRouter>
-      <React.Fragment>
-        <Background />
-        <Switch>
-          <Route exact path="/" component={Landing}></Route>
-          <Route component={MainComponents} />
-        </Switch>
-      </React.Fragment>
-    </BrowserRouter>
+    <React.Fragment>
+      <Background />
+      <Header path={location.pathname} />
+      <Route render={({location}) => (
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={1200}
+            classNames="fade"
+        >
+          <Switch location={location}>
+            <Route exaxt path='/portfolio' component={Portfolio}></Route>
+            <Route exaxt path='/about' component={About}></Route>
+            <Route exaxt path='/contact' component={Contact}></Route>
+            <Route exact path="/" component={Landing}></Route>
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    )} />
+    </React.Fragment>
   );
 }
 
-export default App;
+export default withRouter(App);
