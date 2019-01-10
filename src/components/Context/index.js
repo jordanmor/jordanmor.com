@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { projects } from '../../Data/data.json';
 
 const PortfolioContext = React.createContext();
 
 export class Provider extends Component {
   state = { 
-    projects: [],
+    projects,
     menuIsOpen: false
    }
 

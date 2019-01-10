@@ -1,25 +1,33 @@
 import React from 'react';
-import { range } from 'lodash';
+import { Consumer } from '../Context';
 import PortfolioItems from './portfolioItems';
 
 const Portfolio = () => {
-  const projects = range(16);
+
   return (
-    <div className="page">
-      <main>
-        {/* <h1>Portfolio</h1> */}
-        <div className="portfolio-container">
-          <ul className="portfolio">
-            {projects.map((project, index) => (
-              <PortfolioItems
-                key={index}
-                index={index}
-              />
-            ))}
-          </ul>
-        </div>
-      </main>
-    </div>
+    <Consumer>
+      { ({ projects }) => {
+        return (
+          <div className="page">
+            <main>
+              {/* <h1>Portfolio</h1> */}
+              <div className="portfolio-container">
+                <ul className="portfolio">
+                  {projects.map( project => (
+                    <PortfolioItems
+                      key={project.id}
+                      id={project.id}
+                      mainImage={project.image_urls[0]}
+                      description={project.description}
+                    />
+                  ))}
+                </ul>
+              </div>
+            </main>
+          </div>
+        );
+      }}
+    </Consumer>
    );
 }
  
