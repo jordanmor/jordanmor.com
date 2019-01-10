@@ -6,6 +6,7 @@ import Header from './Header';
 import Portfolio from './Portfolio';
 import About from './About';
 import Contact from './contact';
+import Project from './Portfolio/project';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -28,6 +29,10 @@ const App = ({ location }) => {
             classNames="fade"
         >
           <Switch location={location}>
+            <Route 
+              path='/portfolio/project/:id'
+              render={ props => <Project {...props} /> }> 
+            </Route>
             <Route exaxt path='/portfolio' component={Portfolio}></Route>
             <Route exaxt path='/about' component={About}></Route>
             <Route exaxt path='/contact' component={Contact}></Route>

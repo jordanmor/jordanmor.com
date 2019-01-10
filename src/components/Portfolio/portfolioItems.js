@@ -5,7 +5,7 @@ const PortfolioItems = ({ mainImage, description, id }) => {
   return ( 
     <React.Fragment>
       <li>
-        <Link to={`/portfolio/projects/${id}`}>
+        <Link to={`/portfolio/project/${id}`}>
           <img src={process.env.PUBLIC_URL + mainImage} alt={description}/>
         </Link>
       </li>
