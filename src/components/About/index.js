@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
   return ( 
     <div className="page">
-      <div className="about">
+      <main>
         <h1>About Me</h1>
-      </div>
+      </main>
     </div>
    );
 }

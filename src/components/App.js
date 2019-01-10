@@ -21,7 +21,7 @@ const App = ({ location }) => {
       <Background />
       <Header path={location.pathname} />
       <Route render={({location}) => (
-        <TransitionGroup component={null}>
+        <TransitionGroup component={null}> {/* avoid wrapping div */}
           <CSSTransition
             key={location.key}
             timeout={1200}
