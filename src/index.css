@@ -154,16 +154,6 @@ ul {
                         HEADER
 ==============-============-============-==========*/
 
-.header-wrapper-in {
-  opacity: 1;
-  transition: all .4s ease-out .9s;
-}
-
-.header-wrapper-out {
-  opacity: 0;
-  transition: all .4s ease-out;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -294,6 +284,10 @@ main {
   padding-top: 5.2rem;
 }
 
+main h1 {
+  text-align: center;
+}
+
   /* -- Portfolio -- */
 
 .portfolio-container {
@@ -311,6 +305,10 @@ main {
   margin: 0 auto;
 }
 
+.portfolio li {
+  /* z-index: 1; */
+}
+
 .portfolio img {
   display: block;
   border-radius: 5px;
@@ -318,24 +316,24 @@ main {
 }
 
 .project {
+  max-width: 1432px;
   padding: 0 2rem;
+  margin: 0 auto;
 }
 
-.project h1 {
-  text-align: center;
+.carousel-slider,
+.carousel .thumb {
+  border-radius: 4px;
+  z-index: 1;
 }
 
-.project li {
-  margin-bottom: 1rem;
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
 }
 
-.project li:last-of-type {
-  margin-bottom: 0;
-}
-
-.project img {
-  display: block;
-  max-width: 100%;
+div.carousel:nth-child(2) {
+  display: none;
 }
 
 /*============-============-============-============
@@ -356,7 +354,7 @@ main {
 .fade-appear-active,
 .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 300ms linear 900ms;
+    transition: opacity 250ms linear 750ms;
 }
 
 .fade-exit {
@@ -365,7 +363,7 @@ main {
 
 .fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 300ms linear;
+    transition: opacity 250ms linear;
 }
 
 .fade-out {
@@ -374,6 +372,16 @@ main {
 
 .fade-in {
   opacity: 1;
+}
+
+.header-wrapper-in {
+  opacity: 1;
+  transition: all .3s ease-out .7s;
+}
+
+.header-wrapper-out {
+  opacity: 0;
+  transition: all .3s ease-out;
 }
 
 /*============-============-============-============
@@ -407,6 +415,12 @@ main {
 @media (min-width: 741px ) {
   .landing .logo span {
     display: inline-block;
+  }
+  div.carousel:nth-child(2) {
+    display: block;
+  }
+  .control-dots {
+    display: none;
   }
 }
 

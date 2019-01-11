@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from './components/Context';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './index.css';
 import './background.css';
 

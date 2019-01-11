@@ -1,5 +1,6 @@
 import React from 'react';
 import { Consumer } from '../Context';
+import { Carousel } from 'react-responsive-carousel';
 
 const Project = ({ match }) => {
   return (
@@ -11,15 +12,15 @@ const Project = ({ match }) => {
           <main>
             <div className="project">
               <h1>{project.project_name}</h1>
-              <ul>
+              <Carousel showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
                 {images.map((image, index) => (
-                  <li key={index} >
+                  <div key={index} >
                     <img 
                       src={image} 
                       alt={project.description} />
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </Carousel>
             </div>
           </main>
         );

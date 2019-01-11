@@ -25,7 +25,7 @@ const App = ({ location }) => {
         <TransitionGroup component={null}> {/* avoid wrapping div */}
           <CSSTransition
             key={location.key}
-            timeout={1200}
+            timeout={1000}
             classNames="fade"
         >
           <Switch location={location}>
