@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { projects } from '../../Data/data.json';
+import { projects } from '../../data/data.json';
 
 const PortfolioContext = React.createContext();
 
