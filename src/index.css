@@ -8,6 +8,11 @@
   --color-white: #fff;
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -17,7 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-primary);
-  box-sizing: border-box;
 }
 
 /*============-============-============-============
@@ -159,10 +163,10 @@ ul {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 40;
   min-height: 40px;
   color: var(--color-white);
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(50, 50, 50, 1);
 }
 
 .header .logo {
@@ -339,6 +343,10 @@ div.carousel:nth-child(2) {
 
   /* -- ABOUT ME -- */
 
+.about {
+  padding-bottom: 2rem;
+}
+
 .skills ul {
   max-width: 850px;
   display: grid;
@@ -351,7 +359,7 @@ div.carousel:nth-child(2) {
 
 .skills li {
   height: 95px;
-  width: 55px;
+  width: 65px;
   display: flex;
   flex-direction: column;
 }
@@ -375,6 +383,43 @@ div.carousel:nth-child(2) {
   font-size: .8rem;
   font-weight: bold;
   text-align: center;
+}
+
+.card {
+  max-width: 850px;
+  position: relative;
+  z-index: 1;
+  background-color: #333;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+}
+
+.card .lead {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.card .lead span {
+  display: table;
+  margin: 0 auto;
+}
+
+.card img {
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.card .about-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 }
 
 /*============-============-============-============
@@ -454,7 +499,7 @@ div.carousel:nth-child(2) {
 }
 
 @media (min-width: 741px ) {
-  .landing .logo span {
+  .landing .title span {
     display: inline-block;
   }
   div.carousel:nth-child(2) {
@@ -462,6 +507,9 @@ div.carousel:nth-child(2) {
   }
   .control-dots {
     display: none;
+  }
+  .card .lead span {
+    display: inline-block;
   }
 }
 
