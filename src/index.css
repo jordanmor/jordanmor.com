@@ -68,6 +68,8 @@ ul {
 }
 
 .landing h1 {
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Helvetica Neue', sans-serif; */
   font-size: 3.4rem;
   text-align: center;
 }
@@ -103,12 +105,13 @@ ul {
 }
 
 .landing .btn {
+  font-family: 'Cinzel', serif;
   position: relative;
   background-color: #333;
   color: var(--color-white);
   width: 150px;
   height: 150px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -283,7 +286,7 @@ ul {
 main {
   font-size: .8rem;
   font-weight: normal;
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   color: #fff;
   padding-top: 5.2rem;
 }
@@ -291,6 +294,7 @@ main {
 main h1,
 main h2 {
   text-align: center;
+  font-family: 'Cinzel', serif;
 }
 
   /* -- Portfolio -- */
@@ -326,6 +330,19 @@ main h2 {
   margin: 0 auto;
 }
 
+.project-info {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* .project-info .skills ul {
+  justify-content: center;
+} */
+
+.carousel-container {
+  margin-bottom: 1.6rem;
+}
+
 .carousel-slider,
 .carousel .thumb {
   border-radius: 4px;
@@ -344,7 +361,7 @@ div.carousel:nth-child(2) {
   /* -- ABOUT ME -- */
 
 .about {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .skills ul {
@@ -352,7 +369,8 @@ div.carousel:nth-child(2) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15px, 100px));
   justify-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   grid-gap: .5rem;
   margin: 0 auto;
 }
@@ -386,21 +404,25 @@ div.carousel:nth-child(2) {
 }
 
 .card {
-  max-width: 850px;
+  max-width: 650px;
   position: relative;
   z-index: 1;
-  background-color: #333;
+  background-color: rgba(50,50,50,0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2.5rem 1rem;
+  /* color: #333; */
 }
 
 .card h2 {
+  font-family: 'Cinzel', serif;
   font-size: 1.6rem;
 }
 
 .card .lead {
+  font-family: 'Cinzel', serif;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -412,14 +434,15 @@ div.carousel:nth-child(2) {
 
 .card img {
   border-radius: 12px;
+  /* border-radius: 100%; */
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 
 .card .about-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  line-height: 1.35;
+  font-size: .92rem;
 }
 
 /*============-============-============-============
