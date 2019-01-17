@@ -70,7 +70,7 @@ ul {
 .landing h1 {
   font-family: 'Cinzel', serif;
   /* font-family: 'Helvetica Neue', sans-serif; */
-  font-size: 3.4rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -295,6 +295,7 @@ main h1,
 main h2 {
   text-align: center;
   font-family: 'Cinzel', serif;
+  margin-top: 0;
 }
 
   /* -- Portfolio -- */
@@ -326,8 +327,12 @@ main h2 {
 
 .project {
   max-width: 1432px;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0 auto;
+}
+
+.project h1 {
+  margin-bottom: 2rem;
 }
 
 .project-info {
@@ -335,12 +340,60 @@ main h2 {
   margin-bottom: 2rem;
 }
 
-/* .project-info .skills ul {
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.links .btn {
+  font-family: 'Cinzel', serif;
+  position: relative;
+  background-color: #333;
+  color: var(--color-white);
+  padding: .5rem 1rem;
+  width: 150px;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  outline: none;
+  opacity: 1;
+  transition: all .3s ease-out;
+}
+
+.links.external {
   justify-content: center;
-} */
+}
+
+.links.external .btn {
+  font-size: 1rem;
+}
+
+.links .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+  transform: scale(1.05);
+  opacity: .7;
+}
+
+.links .btn + .btn {
+  margin-left: 1.3rem;
+}
+
+.project .skills {
+  margin-bottom: 2rem;
+}
 
 .carousel-container {
   margin-bottom: 1.6rem;
+}
+
+.carousel-desktop {
+  display: none;
 }
 
 .carousel-slider,
@@ -364,6 +417,10 @@ div.carousel:nth-child(2) {
   padding-bottom: 3rem;
 }
 
+.about h2 {
+  margin: .75rem 0;
+}
+
 .skills ul {
   max-width: 850px;
   display: grid;
@@ -376,8 +433,8 @@ div.carousel:nth-child(2) {
 }
 
 .skills li {
-  height: 95px;
-  width: 65px;
+  height: 100px;
+  width: 75px;
   display: flex;
   flex-direction: column;
 }
@@ -539,5 +596,11 @@ div.carousel:nth-child(2) {
 @media (min-width: 1150px ) {
   .portfolio {
     grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+  .carousel-desktop {
+    display: block;
+  }
+  .carousel-mobile {
+    display: none;
   }
 }
