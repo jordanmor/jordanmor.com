@@ -14,7 +14,7 @@ const Project = ({ match }) => {
 
         let prevProjectID = '', nextProjectID = '';
         const projectIndex = projects.indexOf(project);
-        
+
         if (projectIndex === 0) {
           prevProjectID = projects[projects.length - 1].id;
         } else {
@@ -54,10 +54,10 @@ const Project = ({ match }) => {
               </Carousel>
               <div className="project-info">
                   <p>{project.description}</p>
-              </div>
-              <div className="links external">
-                <a href={project.live_link} className="btn">Live Demo</a>
-                <a href={project.github_link} className="btn">Github Repo</a>
+                  <div className="links external">
+                    <a href={project.live_link} className="btn">Live Demo</a>
+                    <a href={project.github_link} className="btn">Github Repo</a>
+                  </div>
               </div>
               <div className="skills">
                   <h2>Technologies Used</h2>

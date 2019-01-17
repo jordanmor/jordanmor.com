@@ -286,7 +286,7 @@ ul {
 main {
   font-size: .8rem;
   font-weight: normal;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
   padding-top: 5.2rem;
 }
@@ -336,8 +336,18 @@ main h2 {
 }
 
 .project-info {
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+  background-color: var(--color-white);
   font-size: 1rem;
+  color: var(--color-primary-darker);
   margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.project-info p {
+  margin: 0;
 }
 
 .links {
@@ -349,7 +359,8 @@ main h2 {
 .links .btn {
   font-family: 'Cinzel', serif;
   position: relative;
-  background-color: #333;
+  z-index: 1;
+  background-color: var(--color-primary-darker);
   color: var(--color-white);
   padding: .5rem 1rem;
   width: 150px;
@@ -365,10 +376,13 @@ main h2 {
 }
 
 .links.external {
+  margin: 1rem 0 0;
   justify-content: center;
 }
 
 .links.external .btn {
+  opacity: .95;
+  width: 160px;
   font-size: 1rem;
 }
 
