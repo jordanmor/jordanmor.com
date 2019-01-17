@@ -34,7 +34,7 @@ const Project = ({ match }) => {
                 <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
                 <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
               </div>
-              <Carousel className="carousel-container carousel-mobile" showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+              <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
                 {images.map((image, index) => (
                   <div key={index} >
                     <img 
@@ -43,7 +43,7 @@ const Project = ({ match }) => {
                   </div>
                 ))}
               </Carousel>
-              <Carousel className="carousel-container carousel-desktop" showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+              <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
                 {images.map((image, index) => (
                   <div key={index} >
                     <img 

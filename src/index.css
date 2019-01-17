@@ -410,15 +410,9 @@ main h2 {
   display: none;
 }
 
-.carousel-slider,
-.carousel .thumb {
+.carousel-slider {
   border-radius: 4px;
   z-index: 1;
-}
-
-.carousel .thumbs {
-  display: flex;
-  justify-content: center;
 }
 
 div.carousel:nth-child(2) {
@@ -598,9 +592,6 @@ div.carousel:nth-child(2) {
   }
   div.carousel:nth-child(2) {
     display: block;
-  }
-  .control-dots {
-    display: none;
   }
   .card .lead span {
     display: inline-block;
