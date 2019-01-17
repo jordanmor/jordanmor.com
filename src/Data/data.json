@@ -31,6 +31,16 @@
       "tags": ["treehouse"]
     },
     {
+      "id": "portfolio-project-2018",
+      "project_name": "Portfolio Project 2018",
+      "description": "A static portfolio site built using Node.js and Express",
+      "technologies": ["NodeJS", "Express", "Pug", "JavaScript"],
+      "live_link": "https://portfolio-project-2018.herokuapp.com/",
+      "github_link": "https://github.com/jordanmor/portfolio-project-2018",
+      "image_urls": ["/images/portfolio-project-2018/project-main.png", "/images/portfolio-project-2018/project-1.png", "/images/portfolio-project-2018/project-2.png", "/images/portfolio-project-2018/project-3.png", "/images/portfolio-project-2018/project-4.png"],
+      "tags": ["treehouse"]
+    },
+    {
       "id": "react-gallery-app",
       "project_name": "React Gallery App",
       "description": "An image gallery built using React and the Flickr API",
