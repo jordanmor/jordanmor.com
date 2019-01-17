@@ -29,36 +29,43 @@ const Project = ({ match }) => {
         return ( 
           <main>
             <div className="project">
+            
               <h1>{project.project_name}</h1>
-              <div className="links">
-                <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
-                <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+
+              <div className="project-card">
+                <div>
+                  <div className="links">
+                    <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
+                    <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+                  </div>
+                  <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+                    {images.map((image, index) => (
+                      <div key={index} >
+                        <img 
+                          src={`${image.match(/\/images\/.+\/project/g)[0]}-mobile-${index + 1}.png` } 
+                          alt={project.description} />
+                      </div>
+                    ))}
+                  </Carousel>
+                  <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+                    {images.map((image, index) => (
+                      <div key={index} >
+                        <img 
+                          src={image} 
+                          alt={project.description} />
+                      </div>
+                    ))}
+                  </Carousel>
+                  <div className="project-info">
+                      <p>{project.description}</p>
+                      <div className="links external">
+                        <a href={project.live_link} className="btn">Live Demo</a>
+                        <a href={project.github_link} className="btn">Github Repo</a>
+                      </div>
+                  </div>
+                </div>
               </div>
-              <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
-                {images.map((image, index) => (
-                  <div key={index} >
-                    <img 
-                      src={`${image.match(/\/images\/.+\/project/g)[0]}-mobile-${index + 1}.png` } 
-                      alt={project.description} />
-                  </div>
-                ))}
-              </Carousel>
-              <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
-                {images.map((image, index) => (
-                  <div key={index} >
-                    <img 
-                      src={image} 
-                      alt={project.description} />
-                  </div>
-                ))}
-              </Carousel>
-              <div className="project-info">
-                  <p>{project.description}</p>
-                  <div className="links external">
-                    <a href={project.live_link} className="btn">Live Demo</a>
-                    <a href={project.github_link} className="btn">Github Repo</a>
-                  </div>
-              </div>
+
               <div className="skills">
                   <h2>Technologies Used</h2>
                   <ul>
