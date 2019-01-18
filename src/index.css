@@ -121,23 +121,8 @@ ul {
   margin-bottom: 2rem;
 }
 
-.social-icons {
-  text-align: center;
+.landing .social-icons {
   margin-bottom: 3.5rem;
-}
-
-.social-icon + .social-icon {
-  margin-left: 2.2rem;
-}
-
-.social-icon svg {
-  color: var(--color-white);
-  transition: transform .3s ease-out;
-  font-size: 2.4rem;
-}
-
-.social-icon svg:hover {
-  transform: scale(1.15);
 }
 
 .landing .btn {
@@ -412,6 +397,15 @@ main h2 {
   margin-bottom: 1rem;
 }
 
+.about .social-icons {
+  margin: .5rem 0 1rem;
+}
+
+.about .social-icon svg {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+}
+
 /*============-============-============-============
                     COMMON COMPONENTS
 ==============-============-============-==========*/
@@ -537,6 +531,28 @@ main h2 {
   font-size: .8rem;
   font-weight: bold;
   text-align: center;
+}
+
+/*============-============-============
+               SOCIAL LINKS
+==============-============-==========*/
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icon + .social-icon {
+  margin-left: 2.2rem;
+}
+
+.social-icon svg {
+  color: var(--color-white);
+  transition: transform .3s ease-out;
+  font-size: 2.4rem;
+}
+
+.social-icon svg:hover {
+  transform: scale(1.15);
 }
 
 /*============-============-============-============
