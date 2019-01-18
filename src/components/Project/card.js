@@ -1,7 +1,7 @@
 import React from 'react';
 import CarouselResponsive from '../common/carouselResponsive';
 
-const ProjectCard = ({ project, images }) => {
+const Card = ({ project, images }) => {
   return ( 
     <div className="card">
       <div className="container">
@@ -13,7 +13,7 @@ const ProjectCard = ({ project, images }) => {
         />
 
         <div className="description">
-          <p>{project.description}</p>
+          <p className="main-text">{project.description}</p>
           <div className="links-external">
             <a href={project.live_link} className="btn">Live Demo</a>
             <a href={project.github_link} className="btn">Github Repo</a>
@@ -25,4 +25,4 @@ const ProjectCard = ({ project, images }) => {
    );
 }
  
-export default ProjectCard;
+export default Card;

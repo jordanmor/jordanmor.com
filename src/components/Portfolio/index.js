@@ -1,6 +1,6 @@
 import React from 'react';
 import { Consumer } from '../Context';
-import PortfolioItems from './portfolioItems';
+import PortfolioItem from './portfolioItem';
 
 const Portfolio = () => {
 
@@ -13,7 +13,7 @@ const Portfolio = () => {
               <div className="container">
                 <ul>
                   {projects.map( project => (
-                    <PortfolioItems
+                    <PortfolioItem
                       key={project.id}
                       id={project.id}
                       mainImage={project.image_urls[0]}

@@ -52,6 +52,14 @@ ul {
   align-items: center;
 }
 
+.wrapper {
+  padding-top: 3.5rem;
+}
+
+.wrapper > div:first-child {
+  margin: 0 auto;
+}
+
 .btn {
   position: relative;
   width: 150px;
@@ -336,49 +344,9 @@ main h2 {
                  PROJECTS
 ==============-============-==========*/
 
-.project-wrapper {
-  padding-top: 3.5rem;
-}
-
 .project {
   max-width: 1200px;
   padding: 0 1rem;
-  margin: 0 auto;
-}
-
-.project h1 {
-  margin: .5rem 0 1rem;
-  color: var(--color-secondary);
-  font-size: 1.4rem;
-}
-
-.project .card {
-  position: relative;
-  z-index: 1;
-  background-color: var(--color-secondary);
-  border-radius: 5px;
-  padding: .8rem;
-  margin-bottom: 1rem;
-}
-
-.project .container {
-  background-color: rgba(250, 250, 250, 0.95);
-  border-radius: 5px;
-  padding: .5rem;
-  overflow: hidden;
-}
-
-.project .description {
-  display: flex;
-  flex-direction: column;
-  padding: 0 .35rem;
-  font-size: 1rem;
-  color: var(--color-primary-darker);
-  border-radius: 4px;
-}
-
-.project .description p {
-  margin: 0;
 }
 
 .project .skills {
@@ -432,55 +400,84 @@ main h2 {
 ==============-============-==========*/
 
 .about {
-  padding-bottom: 3rem;
+  max-width: 800px;
+  padding: 0 1rem 3rem;
 }
 
-.about h2 {
-  margin: .75rem 0;
-}
-
-.about .card {
-  max-width: 650px;
-  position: relative;
-  z-index: 1;
-  background-color: rgba(50,50,50,0.8);
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 2.5rem 1rem;
-}
-
-.about .card h2 {
-  font-family: 'Cinzel', serif;
+.about .card h1 {
   font-size: 1.6rem;
 }
 
-.about .card .lead {
-  font-family: 'Cinzel', serif;
-  text-align: center;
-  font-size: 1.2rem;
+.about .card .main-text {
+  margin-bottom: 1rem;
 }
 
-.about .card .lead span {
-  display: table;
-  margin: 0 auto;
+/*============-============-============-============
+                    COMMON COMPONENTS
+==============-============-============-==========*/
+
+/*============-============-============
+                   CARD
+==============-============-==========*/
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  padding: .8rem;
+  margin-bottom: 1rem;
 }
 
-.about .card img {
+.card .container {
+  background-color: rgba(250, 250, 250, 0.95);
+  border-radius: 5px;
+  padding: .5rem;
+  overflow: hidden;
+}
+
+.card h1 {
+  margin: .5rem 0 1rem;
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0 .75rem;
+}
+
+.card img {
   border-radius: 12px;
   margin: 0 auto;
   display: block;
   max-width: 100%;
 }
 
-.about .card .about-text {
-  line-height: 1.35;
-  font-size: .92rem;
+.card .description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 .35rem;
+  font-size: 1rem;
+  color: var(--color-primary-darker);
+  border-radius: 4px;
 }
 
-/*============-============-============-============
-                    COMMON COMPONENTS
-==============-============-============-==========*/
+.card .lead {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 0 .75rem;
+}
+
+.card .lead span {
+  display: table;
+  margin: 0 auto;
+}
+
+.card .main-text {
+  margin: 0;
+}
 
 /*============-============-============
                  CAROUSEL
