@@ -1,6 +1,6 @@
 import React from 'react';
-import profileImg from '../../assets/img/jordan-profile-pic.jpg';
 import Technologies from '../common/technologies';
+import Card from './card';
 import { SVGs } from '../../assets/svgs';
 
 const About = () => {
@@ -11,22 +11,17 @@ const About = () => {
 
   return ( 
     <div className="page">
-      <main className="about">
-        <h1>About Me</h1>
-        <div className="card">
-          <img src={profileImg} alt="Jordan Mor" />
-          <div>
-            <h2>Jordan Mor</h2>
-            <p className="lead">Front-end developer <span>with additonal back-end skills</span></p>
-            <p className="about-text">Hi! I'm a software developer who loves building web-based applications. I'm currently concentrating on using the MERN (MongoDB, Express, React, Node.js) stack, though I have experience building web apps with SQL databases as well. I'm also currently trying to incorporate CSS Grid & Flexbox into most of my projects, though I'm also comfortable using CSS frameworks such as Bootstrap. I'm a self-motivated, lifelong learner committed to constantly improving my skills and staying current on developments and trends in the industry.</p>
-          </div>
+      <main className="wrapper">
+        <div className="about">
+
+          <Card />
+
+          <Technologies 
+            technologies={svgArray}
+            title="Skills"
+          />
+          
         </div>
-
-        <Technologies 
-          technologies={svgArray}
-          title="Skills"
-        />
-
       </main>
     </div>
    );
