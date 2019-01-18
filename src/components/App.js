@@ -6,7 +6,7 @@ import Header from './Header';
 import Portfolio from './Portfolio';
 import About from './About';
 import Contact from './contact';
-import Project from './Portfolio/project';
+import Project from './Project';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
