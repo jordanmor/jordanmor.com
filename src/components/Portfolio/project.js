@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Consumer } from '../Context';
-import { Carousel } from 'react-responsive-carousel';
+import CarouselResponsive from '../common/carouselResponsive';
 import Technologies from '../common/technologies';
 
 const Project = ({ match }) => {
@@ -37,24 +37,12 @@ const Project = ({ match }) => {
               <div className="card">
                 <div className="container">
                   <h1>{project.project_name}</h1>
-                  <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
-                    {images.map((image, index) => (
-                      <div key={index} >
-                        <img 
-                          src={`${image.match(/\/images\/.+\/project/g)[0]}-mobile-${index + 1}.png` } 
-                          alt={project.description} />
-                      </div>
-                    ))}
-                  </Carousel>
-                  <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
-                    {images.map((image, index) => (
-                      <div key={index} >
-                        <img 
-                          src={image} 
-                          alt={project.description} />
-                      </div>
-                    ))}
-                  </Carousel>
+
+                  <CarouselResponsive 
+                    images={images}
+                    description={project.description}
+                  />
+
                   <div className="description">
                     <p>{project.description}</p>
                     <div className="links-external">
@@ -62,6 +50,7 @@ const Project = ({ match }) => {
                       <a href={project.github_link} className="btn">Github Repo</a>
                     </div>
                   </div>
+
                 </div>
               </div> 
 

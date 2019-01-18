@@ -494,18 +494,9 @@ main h2 {
   background-color: var(--color-off-white);
 }
 
-.carousel-desktop {
-  display: none;
-}
-
 .carousel-slider {
   border-radius: 4px;
-  /* border: 3px solid var(--color-primary); */
   z-index: 1;
-}
-
-div.carousel:nth-child(2) {
-  display: none;
 }
 
 /*============-============-============
@@ -631,17 +622,8 @@ div.carousel:nth-child(2) {
   .landing .title span {
     display: inline-block;
   }
-  div.carousel:nth-child(2) {
-    display: block;
-  }
   .card .lead span {
     display: inline-block;
-  }
-  .carousel-desktop {
-    display: block;
-  }
-  .carousel-mobile {
-    display: none;
   }
 }
 
