@@ -10,10 +10,13 @@
   --color-off-white: #fdfdfd;
 }
 
+/*============-============-============-============
+                        GLOBAL
+==============-============-============-==========*/
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
-
 
 body {
   margin: 0;
@@ -25,11 +28,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-primary);
 }
-
-/*============-============-============-============
-                        GLOBAL
-==============-============-============-==========*/
-
 body::-webkit-scrollbar { 
   display: none;
 }
@@ -54,6 +52,35 @@ ul {
   align-items: center;
 }
 
+.btn {
+  position: relative;
+  width: 150px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: var(--color-primary-darker);
+  color: var(--color-white);
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  outline: none;
+  opacity: 1;
+  transition: all .3s ease-out;
+}
+
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+  transform: scale(1.05);
+  opacity: .7;
+}
+
+.btn + .btn {
+  margin-left: 1.3rem;
+}
+
 /*============-============-============-============
                         LANDING PAGE
 ==============-============-============-==========*/
@@ -71,7 +98,6 @@ ul {
 
 .landing h1 {
   font-family: 'Cinzel', serif;
-  /* font-family: 'Helvetica Neue', sans-serif; */
   font-size: 3rem;
   text-align: center;
 }
@@ -107,32 +133,8 @@ ul {
 }
 
 .landing .btn {
-  font-family: 'Cinzel', serif;
-  position: relative;
-  background-color: #333;
-  color: var(--color-white);
-  width: 150px;
   height: 150px;
   font-size: 1.4rem;
-  font-weight: bold;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  overflow: hidden;
-  outline: none;
-  opacity: 1;
-  transition: all .3s ease-out;
-}
-
-.landing .btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary-darker);
-  border-color: var(--color-primary-darker);
-  transform: scale(1.05);
-  opacity: .7;
-}
-
-.landing .btn + .btn {
-  margin-left: 1.3rem;
 }
 
 .shine {
@@ -181,7 +183,6 @@ ul {
 }
 
 .header .logo h1 {
-  /* font-family: 'Cinzel Decorative', cursive; */
   font-family: 'Cinzel', serif;
   display: inline-block;
   padding: 0;
@@ -189,7 +190,9 @@ ul {
   font-size: 1.6rem;
 }
 
-/* -- Nav -- */
+/*============-============-============
+                    NAV
+==============-============-==========*/
 
 .header nav {
   display: flex;
@@ -216,7 +219,9 @@ ul {
   color: var(--color-white);
 }
 
-/* -- Header Hamburger Menu -- */
+/*============-============-============
+              HAMBURGER MENU
+==============-============-==========*/
 
 .header .nav-icon {
   position: absolute;
@@ -261,7 +266,7 @@ ul {
   top: 7px;
 }
 
-/* Menu Open */
+/* ---- Menu Open ---- */
 
 .header.open .menu-lines {
   background-color: transparent;
@@ -282,7 +287,7 @@ ul {
 }
 
 /*============-============-============-============
-                        MAIN
+                         MAIN
 ==============-============-============-==========*/
 
 main {
@@ -290,23 +295,23 @@ main {
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
-  padding-top: 5.2rem;
 }
 
 main h1,
 main h2 {
   text-align: center;
   font-family: 'Cinzel', serif;
-  margin-top: 0;
 }
 
-  /* -- Portfolio -- */
-
-.portfolio-container {
-  padding: 0 2rem;
-}
+/*============-============-============
+                PORTFOLIO
+==============-============-==========*/
 
 .portfolio {
+  padding-top: 5.2rem;
+}
+
+.portfolio ul {
   max-width: 1423px;
   display: grid;
   grid-template-columns: repeat(2, minmax(160px, 1fr));
@@ -317,8 +322,8 @@ main h2 {
   margin: 0 auto;
 }
 
-.portfolio li {
-  /* z-index: 1; */
+.portfolio .container {
+  padding: 0 2rem;
 }
 
 .portfolio img {
@@ -327,33 +332,43 @@ main h2 {
   max-width: 100%;
 }
 
+/*============-============-============
+                 PROJECTS
+==============-============-==========*/
+
+.project-wrapper {
+  padding-top: 3.5rem;
+}
+
 .project {
-  max-width: 1432px;
+  max-width: 1200px;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
 .project h1 {
-  margin-bottom: 1rem;
+  margin: .5rem 0 1rem;
+  color: var(--color-secondary);
+  font-size: 1.4rem;
 }
 
-.project-card {
+.project .card {
   position: relative;
   z-index: 1;
   background-color: var(--color-secondary);
   border-radius: 5px;
   padding: .8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-.project-card > div {
+.project .container {
   background-color: rgba(250, 250, 250, 0.95);
   border-radius: 5px;
   padding: .5rem;
   overflow: hidden;
 }
 
-.project-info {
+.project .description {
   display: flex;
   flex-direction: column;
   padding: 0 .35rem;
@@ -362,61 +377,114 @@ main h2 {
   border-radius: 4px;
 }
 
-.project-info p {
+.project .description p {
   margin: 0;
-}
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: .5rem;
-}
-
-.links .btn {
-  font-family: 'Cinzel', serif;
-  position: relative;
-  z-index: 1;
-  color: var(--color-white);
-  background-color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
-  padding: .5rem;
-  width: 130px;
-  text-align: center;
-  font-size: .75rem;
-  font-weight: bold;
-  border-radius: 4px;
-  overflow: hidden;
-  outline: none;
-  opacity: 1;
-  transition: all .3s ease-out;
-}
-
-.links.external {
-  margin: 1rem 0 0;
-  justify-content: center;
-}
-
-.links.external .btn {
-  opacity: .95;
-  width: 160px;
-  font-size: .95rem;
-}
-
-.links .btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary-darker);
-  border-color: var(--color-primary-darker);
-  transform: scale(1.05);
-  opacity: .7;
-}
-
-.links .btn + .btn {
-  margin-left: 1.3rem;
 }
 
 .project .skills {
   margin-bottom: 2rem;
 }
+
+/*============-============
+            LINKS
+==============-==========*/
+
+.links-project,
+.links-external {
+  display: flex;
+}
+
+/* -- Project Links -- */
+
+.links-project {
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.links-project .btn {
+  width: 130px;
+  padding: .5rem;
+  font-size: .65rem;
+  color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 8px solid var(--color-secondary);
+}
+
+/* -- External Links -- */
+
+.links-external {
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+.links-external .btn {
+  width: 160px;
+  padding: .5rem;
+  font-size: .95rem;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  opacity: .95;
+}
+
+/*============-============-============
+                 ABOUT ME
+==============-============-==========*/
+
+.about {
+  padding-bottom: 3rem;
+}
+
+.about h2 {
+  margin: .75rem 0;
+}
+
+.about .card {
+  max-width: 650px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(50,50,50,0.8);
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 2.5rem 1rem;
+}
+
+.about .card h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+}
+
+.about .card .lead {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.about .card .lead span {
+  display: table;
+  margin: 0 auto;
+}
+
+.about .card img {
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.about .card .about-text {
+  line-height: 1.35;
+  font-size: .92rem;
+}
+
+/*============-============-============-============
+                    COMMON COMPONENTS
+==============-============-============-==========*/
+
+/*============-============-============
+                 CAROUSEL
+==============-============-==========*/
 
 .carousel-container {
   margin-bottom: 1rem;
@@ -440,17 +508,11 @@ div.carousel:nth-child(2) {
   display: none;
 }
 
-  /* -- ABOUT ME -- */
+/*============-============-============
+               TECHNOLOGIES
+==============-============-==========*/
 
-.about {
-  padding-bottom: 3rem;
-}
-
-.about h2 {
-  margin: .75rem 0;
-}
-
-.skills ul {
+.technologies ul {
   max-width: 850px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15px, 100px));
@@ -461,14 +523,14 @@ div.carousel:nth-child(2) {
   margin: 0 auto;
 }
 
-.skills li {
+.technologies li {
   height: 100px;
   width: 75px;
   display: flex;
   flex-direction: column;
 }
 
-.skills-icon {
+.technologies .icon {
   flex-basis: 70%;
   width: 100%;
   align-self: center;
@@ -477,7 +539,7 @@ div.carousel:nth-child(2) {
   justify-content: center;
 }
 
-.skills-name {
+.technologies .name {
   flex-basis: 30%;
   width: 100%;
   display: flex;
@@ -487,48 +549,6 @@ div.carousel:nth-child(2) {
   font-size: .8rem;
   font-weight: bold;
   text-align: center;
-}
-
-.card {
-  max-width: 650px;
-  position: relative;
-  z-index: 1;
-  background-color: rgba(50,50,50,0.8);
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 2.5rem 1rem;
-  /* color: #333; */
-}
-
-.card h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.6rem;
-}
-
-.card .lead {
-  font-family: 'Cinzel', serif;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.card .lead span {
-  display: table;
-  margin: 0 auto;
-}
-
-.card img {
-  border-radius: 12px;
-  /* border-radius: 100%; */
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-}
-
-.card .about-text {
-  line-height: 1.35;
-  font-size: .92rem;
 }
 
 /*============-============-============-============
