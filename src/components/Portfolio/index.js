@@ -9,10 +9,9 @@ const Portfolio = () => {
       { ({ projects }) => {
         return (
           <div className="page">
-            <main>
-              {/* <h1>Portfolio</h1> */}
-              <div className="portfolio-container">
-                <ul className="portfolio">
+            <main className="portfolio">
+              <div className="container">
+                <ul>
                   {projects.map( project => (
                     <PortfolioItems
                       key={project.id}

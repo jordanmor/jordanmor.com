@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Consumer } from '../Context';
 import { Carousel } from 'react-responsive-carousel';
-import { SVGs } from '../../assets/svgs';
+import Technologies from '../common/technologies';
 
 const Project = ({ match }) => {
   return (
@@ -10,7 +10,6 @@ const Project = ({ match }) => {
       { ({ projects }) => {
         const project = projects.filter(project => project.id === match.params.id)[0];
         const images = project.image_urls.slice(1); // remove the first main image from image array
-        const skills = project.technologies;
 
         let prevProjectID = '', nextProjectID = '';
         const projectIndex = projects.indexOf(project);
@@ -27,17 +26,17 @@ const Project = ({ match }) => {
         }
 
         return ( 
-          <main>
+          <main className="project-wrapper">
             <div className="project">
-            
-              <h1>{project.project_name}</h1>
 
-              <div className="project-card">
-                <div>
-                  <div className="links">
-                    <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
-                    <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
-                  </div>
+              <div className="links-project">
+                <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
+                <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+              </div>
+
+              <div className="card">
+                <div className="container">
+                  <h1>{project.project_name}</h1>
                   <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
                     {images.map((image, index) => (
                       <div key={index} >
@@ -56,31 +55,21 @@ const Project = ({ match }) => {
                       </div>
                     ))}
                   </Carousel>
-                  <div className="project-info">
-                      <p>{project.description}</p>
-                      <div className="links external">
-                        <a href={project.live_link} className="btn">Live Demo</a>
-                        <a href={project.github_link} className="btn">Github Repo</a>
-                      </div>
+                  <div className="description">
+                    <p>{project.description}</p>
+                    <div className="links-external">
+                      <a href={project.live_link} className="btn">Live Demo</a>
+                      <a href={project.github_link} className="btn">Github Repo</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </div> 
 
-              <div className="skills">
-                  <h2>Technologies Used</h2>
-                  <ul>
-                    {skills.map((skill, index) => (
-                      <li key={index}>
-                        <div className="skills-icon">
-                          {SVGs[skill]}
-                        </div>
-                        <div className="skills-name">
-                          <p>{skill}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-              </div>
+              <Technologies 
+                technologies={project.technologies}
+                title="Technologies Used"
+              />
+
             </div>
           </main>
         );

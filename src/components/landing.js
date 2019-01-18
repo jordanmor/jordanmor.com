@@ -14,7 +14,7 @@ const Landing = () => {
             <a className="social-icon" href="https://www.linkedin.com/in/jordanmor/"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
             <a className="social-icon" href="https://github.com/jordanmor"><FontAwesomeIcon icon={['fab', 'github']} /></a>
           </div>
-          <div className="flex-center">
+          <div className="btn-group flex-center">
             <Link to="/portfolio" className="btn flex-center"><span>Portfolio</span><i className="shine"></i></Link>
             <Link to="/about" className="btn flex-center"><span>About Me</span><i className="shine two"></i></Link>
           </div>
