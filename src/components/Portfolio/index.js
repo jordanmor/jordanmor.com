@@ -1,6 +1,7 @@
 import React from 'react';
 import { Consumer } from '../Context';
 import PortfolioItem from './portfolioItem';
+import Footer from '../footer';
 
 const Portfolio = () => {
 
@@ -23,6 +24,7 @@ const Portfolio = () => {
                 </ul>
               </div>
             </main>
+            <Footer />
           </div>
         );
       }}

@@ -3,6 +3,7 @@ import { Consumer } from '../Context';
 import ProjectLinks from './projectLinks';
 import Card from './card';
 import Technologies from '../common/technologies';
+import Footer from '../footer';
 
 const Project = ({ match }) => {
   return (
@@ -36,6 +37,7 @@ const Project = ({ match }) => {
           );
         }}
       </Consumer>
+      <Footer />
     </div>
   );
 }

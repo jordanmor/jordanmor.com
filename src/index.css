@@ -386,7 +386,7 @@ main h2 {
 
 .about {
   max-width: 800px;
-  padding: 0 1rem 3rem;
+  padding: 0 1rem;
 }
 
 .about .card h1 {
@@ -404,6 +404,30 @@ main h2 {
 .about .social-icon svg {
   color: var(--color-secondary);
   font-size: 1.8rem;
+}
+
+/*============-============-============-============
+                        FOOTER
+==============-============-============-==========*/
+
+.footer {
+  margin: 2rem 0;
+}
+
+.footer .social-icons {
+  margin: 0 0 1rem;
+}
+
+.footer .social-icon svg {
+  font-size: 1.4rem;
+}
+
+.copyright {
+  color: var(--color-white);
+  text-align: center;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
 }
 
 /*============-============-============-============

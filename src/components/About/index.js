@@ -1,6 +1,7 @@
 import React from 'react';
 import Technologies from '../common/technologies';
 import Card from './card';
+import Footer from '../footer';
 import { SVGs } from '../../assets/svgs';
 
 const About = () => {
@@ -22,6 +23,7 @@ const About = () => {
           />
           
         </div>
+        <Footer />
       </main>
     </div>
    );
