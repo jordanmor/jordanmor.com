@@ -1,27 +1,25 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
 import { Consumer } from '../Context';
+import Nav from './nav';
+import MenuButton from './menuButton';
+import Logo from './logo';
 
 const Header = ({ path }) => {
+  const classNames = path === '/' ? 'header-wrapper-out fade-out' : 'header-wrapper-in fade-in';
+
   return (
     <Consumer>
       { ({ menuIsOpen, actions }) => {
         return ( 
-          <div className={path === '/' ? 'header-wrapper-out fade-out' : 'header-wrapper-in fade-in'} >
-            <header className={ menuIsOpen ? "header open" : "header" }>
-              <div className="logo">
-                <Link to="/" onClick={ actions.closeMenu }>
-                  <h1>Jordan Mor</h1>
-                </Link>
-              </div>
-              <button onClick={ actions.toggleMenu } className="nav-icon">
-                <span className="menu-lines"></span>
-              </button>
-              <nav>
-                <NavLink onClick={ actions.closeMenu } to="/portfolio">Portfolio</NavLink>
-                <NavLink onClick={ actions.closeMenu } to="/about">About Me</NavLink>
-                <NavLink onClick={ actions.closeMenu } to="/contact">Contact Me</NavLink>
-              </nav>
+          <div className={classNames} >
+            <header className={ menuIsOpen ? "open" : null }>
+
+              <Logo closeMenu={actions.closeMenu} />
+
+              <MenuButton toggleMenu={actions.toggleMenu} />
+
+              <Nav closeMenu={actions.closeMenu} />
+
             </header>
           </div>
         );
