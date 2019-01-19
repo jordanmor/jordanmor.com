@@ -57,18 +57,6 @@ ul {
 ==============-============-============-==========*/
 
 /*============-============-============
-                  WRAPPER
-==============-============-==========*/
-
-.wrapper {
-  padding-top: 3.5rem;
-}
-
-.wrapper > div:first-child {
-  margin: 0 auto;
-}
-
-/*============-============-============
                   BUTTON
 ==============-============-==========*/
 
@@ -438,6 +426,42 @@ header.open .menu-lines::after {
   transform: rotateZ(-45deg);
 }
 
+/*============-============-============
+              PROJECT LINKS
+==============-============-==========*/
+
+.links-project {
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  padding: 0 1rem;
+  top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  opacity: 1;
+  transition: opacity .3s ease-out; 
+}
+
+.links-project.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.links-project .btn {
+  width: 130px;
+  padding: .5rem;
+  font-size: .65rem;
+  color: var(--color-secondary);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 8px solid var(--color-secondary);
+}
+
+.links-project .btn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
 /*============-============-============-============
                          MAIN
 ==============-============-============-==========*/
@@ -488,43 +512,28 @@ main h2 {
                  PROJECTS
 ==============-============-==========*/
 
+/*============-============-============
+                  WRAPPER
+==============-============-==========*/
+
+.project-wrapper {
+  padding-top: 6.5rem;
+}
+
 .project {
   max-width: 1200px;
   padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .project .skills {
   margin-bottom: 2rem;
 }
 
-/*============-============
-            LINKS
-==============-==========*/
-
-.links-project,
-.links-external {
-  display: flex;
-}
-
-/* -- Project Links -- */
-
-.links-project {
-  justify-content: space-between;
-  margin-bottom: .5rem;
-}
-
-.links-project .btn {
-  width: 130px;
-  padding: .5rem;
-  font-size: .65rem;
-  color: var(--color-secondary);
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 8px solid var(--color-secondary);
-}
-
 /* -- External Links -- */
 
 .links-external {
+  display: flex;
   justify-content: center;
   margin: 1rem 0 0;
 }
@@ -543,9 +552,14 @@ main h2 {
                  ABOUT ME
 ==============-============-==========*/
 
+.about-wrapper {
+  padding-top: 3.5rem;
+}
+
 .about {
   max-width: 800px;
   padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .about .card h1 {

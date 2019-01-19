@@ -12,7 +12,7 @@ const About = () => {
 
   return ( 
     <div className="page">
-      <main className="wrapper">
+      <main className="about-wrapper">
         <div className="about">
 
           <Card />
