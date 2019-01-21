@@ -15,7 +15,7 @@ const Card = ({ project, images }) => {
         <div className="description">
           <p className="main-text">{project.description}</p>
           <div className="links-external">
-            <a href={project.live_link} className="btn">Live Demo</a>
+            {project.live_link && <a href={project.live_link} className="btn">Live Demo</a>}
             <a href={project.github_link} className="btn">Github Repo</a>
           </div>
         </div>
