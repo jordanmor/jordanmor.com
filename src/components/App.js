@@ -5,16 +5,17 @@ import Landing from './landing';
 import Header from './Header';
 import Portfolio from './Portfolio';
 import About from './About';
-import Contact from './contact';
+import Contact from './Contact';
 import Project from './Project';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
 
-library.add(fab); // make font-awesome brand icons available to components
+library.add(fab, faEnvelope); // make font-awesome brand icons available to components
 
 const App = ({ location }) => {
   return (
