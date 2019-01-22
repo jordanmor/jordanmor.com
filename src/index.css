@@ -548,12 +548,11 @@ main h2 {
 ==============-============-==========*/
 
 .about-wrapper {
-  padding-top: 3.5rem;
+  padding: 3.5rem 1rem 0;
 }
 
 .about {
   max-width: 800px;
-  padding: 0 1rem;
   margin: 0 auto;
 }
 
@@ -790,6 +789,7 @@ main h2 {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    transition: all .3s ease-out;
   }
   header .logo,
   header .nav-wrapper {
@@ -815,6 +815,15 @@ main h2 {
   }
   .project-wrapper {
     padding: 9.5rem 2rem 0;
+  }
+  .about-wrapper {
+    padding-top: 5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-about header > div {
+    max-width: 800px;
   }
 }
 

@@ -7,7 +7,14 @@ import Logo from './logo';
 import ProjectLinks from './projectLinks';
 
 const Header = ({ path }) => {
-  const classNames = path === '/' ? 'header-wrapper-out fade-out' : 'header-wrapper-in fade-in';
+  let classNames = '';
+  if(path === '/') {
+    classNames = 'header-wrapper-out fade-out';
+  } else if (path === '/about' || path === '/contact') {
+    classNames = 'header-wrapper-in fade-in header-about';
+  } else {
+    classNames = 'header-wrapper-in fade-in';
+  }
 
   return (
     <Consumer>
