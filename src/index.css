@@ -165,18 +165,23 @@ ul {
                TECHNOLOGIES
 ==============-============-==========*/
 
-.technologies ul {
-  max-width: 850px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15px, 100px));
-  justify-items: center;
-  justify-content: space-between;
-  /* justify-content: center; */
-  grid-gap: .5rem;
+.technologies {
+  max-width: 800px;
   margin: 0 auto;
 }
 
+.technologies ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 2rem;
+}
+
 .technologies li {
+  position: relative;
   height: 100px;
   width: 75px;
   display: flex;
@@ -640,7 +645,7 @@ main h2 {
 ==============-============-============-==========*/
 
 .footer {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 .footer .social-icons {
@@ -800,7 +805,7 @@ main h2 {
     font-weight: bold;
   }
   .links-project {
-    top: 6.5rem;
+    top: 6rem;
   }
   .portfolio {
     padding: 5.2rem 2rem 0;
@@ -809,7 +814,7 @@ main h2 {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
   }
   .project-wrapper {
-    padding: 10rem 2rem 0;
+    padding: 9.5rem 2rem 0;
   }
 }
 
