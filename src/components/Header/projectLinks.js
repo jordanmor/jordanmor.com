@@ -28,9 +28,11 @@ const ProjectLinks = ({ path }) => {
         }
         
         return ( 
-          <div className={menuIsOpen ? "links-project hide" : "links-project"}>
-            <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
-            <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+          <div className="links-project-wrapper">
+            <div className={menuIsOpen ? "links-project hide" : "links-project"}>
+              <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
+              <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+            </div>
           </div>
         );
       }}

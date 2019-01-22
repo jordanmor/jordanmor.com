@@ -1,5 +1,6 @@
 import React from 'react';
 import { Consumer } from '../Context';
+import MediaQuery from 'react-responsive';
 import Nav from './nav';
 import MenuButton from './menuButton';
 import Logo from './logo';
@@ -14,15 +15,17 @@ const Header = ({ path }) => {
         return ( 
           <div className={classNames} >
             <header className={ menuIsOpen ? "open" : null }>
+              <div>
+                <Logo closeMenu={actions.closeMenu} />
 
-              <Logo closeMenu={actions.closeMenu} />
+                <MediaQuery maxWidth={768}>
+                  <MenuButton toggleMenu={actions.toggleMenu} />
+                </MediaQuery>
 
-              <MenuButton toggleMenu={actions.toggleMenu} />
-
-              <Nav closeMenu={actions.closeMenu} />
-
+                <Nav closeMenu={actions.closeMenu} />
+              </div>
             </header>
-
+            
             <ProjectLinks path={path} menuIsOpen={menuIsOpen} />
 
           </div>
