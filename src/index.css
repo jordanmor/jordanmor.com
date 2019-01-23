@@ -129,7 +129,7 @@ ul {
 .card .lead {
   font-family: 'Cinzel', serif;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: bold;
   margin: 0 0 .75rem;
 }
@@ -562,10 +562,6 @@ main h2 {
   font-size: 1.6rem;
 }
 
-.about .card .lead {
-  font-size: 1.1rem;
-}
-
 .about .card .main-text {
   font-size: .95rem;
   text-align: justify;
@@ -746,7 +742,19 @@ main h2 {
                       MEDIA QUERIES
 ==============-============-============-==========*/
 
-@media (max-width: 359px ) {
+@media (max-width: 320px ) {
+  .card .lead {
+    font-size: .85rem;
+  }
+  .about .card .main-text {
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 321px ) and (max-width: 360px ) {
+  .card .lead {
+    font-size: .95rem;
+  }
   .portfolio {
     grid-template-columns: 1fr;
   }
