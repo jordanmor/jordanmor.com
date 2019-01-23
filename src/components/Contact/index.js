@@ -4,9 +4,9 @@ import Card from './card';
 const Contact = () => {
 
   const contacts = [
-    {title: "Twitter", icon: ['fab', 'twitter'], url: "https://twitter.com/imjordanmor"},
-    {title: "LinkedIn", icon: ['fab', 'linkedin'], url: "https://www.linkedin.com/in/jordanmor/"},
     {title: "GitHub", icon: ['fab', 'github'], url: "https://github.com/jordanmor"},
+    {title: "LinkedIn", icon: ['fab', 'linkedin'], url: "https://www.linkedin.com/in/jordanmor/"},
+    {title: "Twitter", icon: ['fab', 'twitter'], url: "https://twitter.com/imjordanmor"},
     {title: "Email", icon: "envelope", url: "mailto:hi@jordanmor.com"}
   ];
 
