@@ -140,7 +140,7 @@ ul {
 }
 
 .card .main-text {
-  margin: 0;
+  margin: .25rem 0;
   font-size: .95rem;
 }
 
@@ -554,12 +554,30 @@ main h2 {
   margin: 0 auto;
 }
 
+.about .card {
+  margin-bottom: 3rem;
+}
+
 .about .card h1 {
   font-size: 1.6rem;
 }
 
+.about .card .lead {
+  font-size: 1.1rem;
+}
+
 .about .card .main-text {
+  font-size: .95rem;
+  text-align: justify;
   margin-bottom: 1rem;
+}
+
+.about .technologies {
+  margin-bottom: 2rem;
+}
+
+.about .technologies h2 {
+  margin-bottom: 1.8rem;
 }
 
 .about .social-icons {
@@ -569,6 +587,11 @@ main h2 {
 .about .social-icon svg {
   color: var(--color-secondary);
   font-size: 1.6rem;
+}
+
+.about .technologies h2 span {
+  display: table;
+  margin: 0 auto;
 }
 
 /*============-============-============
@@ -729,12 +752,35 @@ main h2 {
   }
 }
 
+@media (min-width: 500px ) {
+  .about .technologies h2 span {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 550px ) {
   .portfolio {
     grid-template-columns: repeat(3, minmax(160px, 1fr));
   }
   .contact ul {
     grid-gap: 2rem;
+  }
+  .project .card .main-text {
+    margin: .35rem 0 .5rem;
+  }
+  .about .card .container {
+    padding: .75rem;
+  }
+  .card .lead span:first-of-type {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 640px ) {
+  .about .card .container > div {
+    width: 550px;
+    margin: 0 auto;
   }
 }
 
@@ -767,9 +813,6 @@ main h2 {
   }
   .landing .btn + .btn {
     margin-left: 2rem;
-  }
-  .card .lead span {
-    display: inline-block;
   }
 }
 
@@ -854,6 +897,13 @@ main h2 {
   }
   .portfolio ul {
     grid-template-columns: repeat(4, minmax(160px, 1fr));
+  }
+  .project .container {
+    padding: 1rem 2rem;
+  }
+  .project .card .main-text {
+    width: 75%;
+    margin: 1rem auto;
   }
   .contact-wrapper {
     padding-top: 8rem;

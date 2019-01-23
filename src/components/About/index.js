@@ -10,6 +10,8 @@ const About = () => {
     svgArray.push(prop);
   }
 
+  const websiteTechnologies = [ "React", "JavaScript", "CSS3", "HTML5", "CSS Grid & Flexbox", "Responsive Web Design"];
+
   return ( 
     <div className="page">
       <main className="about-wrapper">
@@ -21,6 +23,12 @@ const About = () => {
             technologies={svgArray}
             title="Skills"
           />
+
+          <Technologies 
+            technologies={websiteTechnologies}
+            title="Technologies Used"
+            span="to Build This Website"
+          />        
           
         </div>
         <Footer />

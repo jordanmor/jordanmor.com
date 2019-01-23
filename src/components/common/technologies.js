@@ -1,10 +1,10 @@
 import React from 'react';
 import { SVGs } from '../../assets/svgs';
 
-const Technologies = ({ technologies, title }) => {
+const Technologies = ({ technologies, title, span }) => {
   return ( 
     <div className="technologies">
-      <h2>{title}</h2>
+      <h2>{title} {span && <span>{span}</span>}</h2>
       <ul>
         {technologies.map((technology, index) => (
           <li key={index}>
