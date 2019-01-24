@@ -13,8 +13,8 @@ const PortfolioItems = ({ project }) => {
           <img className="front"src={process.env.PUBLIC_URL + image_urls[0]} alt={description} />
           <div className="back photo-desc">
             <h3>{project_name}</h3>
-            <p>Aenean lacinia bibendu</p>
-            <Link className="button" to={`/portfolio/project/${id}`}>View Project</Link>
+            {/* <p>Aenean lacinia bibendu</p> */}
+            <Link className="btn-secondary" to={`/portfolio/project/${id}`}>View Project</Link>
           </div>
           <img className="left" src={`${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-2.png` }  alt={description} />
           <img className="right" src={`${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-3.png` } alt={description} />
