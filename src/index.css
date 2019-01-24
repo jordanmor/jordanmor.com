@@ -8,7 +8,76 @@
   --color-secondary: rgba(44, 62, 80, 0.95);
   --color-white: #fff;
   --color-off-white: #fdfdfd;
+
+  /* --max-width: 768px; */
+
+  --size-cube-fixed: 140px;
+  --cube-margin-btm-fixed: 2rem;
+
+  --grid-columns: 1;
 }
+
+@media (max-width: 374px ) {
+  :root {
+    --size-cube: calc(var(--size-cube-fixed) * 1.5);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 1.5);
+    }
+}
+
+@media (min-width: 375px ) {
+  :root {
+    --grid-columns: 2;
+    --size-cube: calc(var(--size-cube-fixed) * .95);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * .95);
+  }
+}
+
+@media (min-width: 481px ) {
+  :root {
+    --size-cube: calc(var(--size-cube-fixed) * 1.2);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 1.4);
+  }
+}
+
+@media (min-width: 600px ) {
+  :root {
+    --size-cube: calc(var(--size-cube-fixed) * 1.55);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 1.75);
+  }
+}
+
+@media (min-width: 768px ) {
+  :root {
+    --grid-columns: 3;
+    --size-cube: calc(var(--size-cube-fixed) * 1.25);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 1.45);
+    --max-width: 768px;
+  }
+}
+
+@media (min-width: 1025px ) {
+  :root {
+    --grid-columns: 4;
+    --max-width: 1025px;
+  }
+}
+
+@media (min-width: 1281px ) {
+  :root {
+    --size-cube: calc(var(--size-cube-fixed) * 1.6);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 2.2);
+    --max-width: 1281px;
+  }
+}
+
+/* @media (min-width: 1600px ) {
+  :root {
+    --size-cube: calc(var(--size-cube-fixed) * 1.6);
+    --cube-margin-btm: calc(var(--cube-margin-btm-fixed) * 2.2);
+    --grid-columns: 5;
+    --max-width: 1600px;
+  }
+} */
 
 /*============-============-============-============
                       BASE STYLES
@@ -320,6 +389,7 @@ header {
 
 header > div {
   position: relative;
+  max-width: calc(var(--max-width) - 45px);
 }
 
 header .logo {
@@ -464,6 +534,91 @@ header.open .menu-lines::after {
   background-color: rgba(255, 255, 255, 1);
 }
 
+/*============-============-============
+                  CUBES
+==============-============-==========*/
+
+.button {
+	font-size: .8em;
+	color: #fff;
+	width: 90%;
+	line-height: 1.15;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .95em 0;
+	border-radius: .5em;
+	background: rgba(74,137,202, .8);
+	margin: auto;
+}
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+.cube-container {
+	perspective: 800px;
+	text-align: center;
+  margin-bottom: var(--cube-margin-btm);
+	box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+}
+
+.photo-cube {
+  width: var(--size-cube);
+	height: var(--size-cube);
+	transition: transform 1.4s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.photo-cube:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.photo-cube:hover {
+	transform: rotateY(-270deg);
+}
+
+.photo-desc {
+	font-size: .85em;
+	color: #fff;
+	padding: 1.1em 1em 0;
+	background: #345d88;
+}
+
+.front,
+.back,
+.left,
+.right {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.front {
+	transform: translate3d(0, 0, calc(var(--size-cube) / 2));
+}
+
+.back {
+	transform: translateZ(calc(var(--size-cube) / -2)) rotateY(270deg);
+	transform-origin: center left;
+}
+
+.left {
+	transform: rotateY(-270deg) translate3d(calc(var(--size-cube) / 2), 0, 0);
+	transform-origin: top right;
+}
+
+.right {
+	transform: translateZ(calc(var(--size-cube) / -2)) rotateY(180deg);
+}
+
 /*============-============-============-============
                          MAIN
 ==============-============-============-==========*/
@@ -486,16 +641,17 @@ main h2 {
 ==============-============-==========*/
 
 .portfolio {
-  padding: 5.2rem 1rem 0;
+  padding: 7.2rem 1rem 0;
 }
 
 .portfolio ul {
-  max-width: 1200px;
+  max-width: var(--max-width);
   display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
   grid-template-rows: auto;
   grid-gap: 1rem;
   justify-items: center;
+  align-content: center;
   justify-content: space-evenly;
   margin: 0 auto;
 }
@@ -519,7 +675,7 @@ main h2 {
   margin: 0 auto;
 }
 
-.project .skills {
+.project .technologies {
   margin-bottom: 2rem;
 }
 
@@ -671,7 +827,7 @@ main h2 {
 ==============-============-============-==========*/
 
 .footer {
-  margin: 3rem 0;
+  /* margin: 1rem 0; */
 }
 
 .footer .social-icons {
@@ -760,6 +916,7 @@ main h2 {
   }
 }
 
+
 @media (min-width: 500px ) {
   .about .technologies h2 span {
     display: inline-block;
@@ -768,9 +925,6 @@ main h2 {
 }
 
 @media (min-width: 550px ) {
-  .portfolio {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
-  }
   .contact ul {
     grid-gap: 2rem;
   }
@@ -789,12 +943,6 @@ main h2 {
   .about .card .container > div {
     width: 550px;
     margin: 0 auto;
-  }
-}
-
-@media (min-width: 667px ) and (max-width: 823px ) and (orientation: landscape) {
-  .portfolio {
-    grid-template-columns: repeat(4, minmax(140px, 1fr));
   }
 }
 
@@ -824,7 +972,7 @@ main h2 {
   }
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 767px ) {
   header nav {
     display: flex;
     justify-content: space-around;
@@ -836,7 +984,7 @@ main h2 {
   }
 }
 
-@media (min-width: 769px ) {
+@media (min-width: 768px ) {
   .header-wrapper-in,
   .header-wrapper-out {
     padding: 0 2rem;
@@ -846,7 +994,6 @@ main h2 {
     padding: 0 2rem;
   }
   header > div {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -870,10 +1017,8 @@ main h2 {
     top: 6rem;
   }
   .portfolio {
-    padding: 5.2rem 2rem 0;
-  }
-  .portfolio ul {
-    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-wrapper {
     padding: 9.5rem 2rem 0;
@@ -906,9 +1051,6 @@ main h2 {
   .landing {
     margin-top: 14rem;
   }
-  .portfolio ul {
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-  }
   .project .container {
     padding: 1rem 2rem;
   }
@@ -924,7 +1066,7 @@ main h2 {
     margin-bottom: 3.5rem;
   }
   .contact ul {
-    grid-template-columns: repeat(2, minmax(100px, 225px));
+    grid-template-columns: repeat(2, minmax(155px, 225px));
     grid-gap: 2.5rem;
   }
   .contact .container {

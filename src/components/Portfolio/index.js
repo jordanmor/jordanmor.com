@@ -16,9 +16,7 @@ const Portfolio = () => {
                   {projects.map( project => (
                     <PortfolioItem
                       key={project.id}
-                      id={project.id}
-                      mainImage={project.image_urls[0]}
-                      description={project.description}
+                      project={project}
                     />
                   ))}
                 </ul>
