@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 import Nav from './nav';
 import MenuButton from './menuButton';
 import Logo from './logo';
+import ThreeDButton from './threeDBtn';
 import ProjectLinks from './projectLinks';
 
 const Header = ({ path }) => {
@@ -23,13 +24,21 @@ const Header = ({ path }) => {
           <div className={classNames} >
             <header className={ menuIsOpen ? "open" : null }>
               <div>
+                <ThreeDButton 
+                  path={path}
+                  classNames="threeD sm-screens"
+                />
                 <Logo closeMenu={actions.closeMenu} />
 
                 <MediaQuery maxWidth={768}>
                   <MenuButton toggleMenu={actions.toggleMenu} />
                 </MediaQuery>
 
-                <Nav closeMenu={actions.closeMenu} />
+                <Nav 
+                  closeMenu={actions.closeMenu}
+                  togglePortfolioBtn={actions.togglePortfolioBtn}
+                  path={path}
+                />
               </div>
             </header>
             

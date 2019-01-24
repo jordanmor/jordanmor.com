@@ -34,7 +34,7 @@ const App = ({ location }) => {
               path='/portfolio/project/:id'
               render={ props => <Project {...props} /> }> 
             </Route>
-            <Route exaxt path='/portfolio' component={Portfolio}></Route>
+            <Route path='/portfolio' component={Portfolio}></Route>
             <Route exaxt path='/about' component={About}></Route>
             <Route exaxt path='/contact' component={Contact}></Route>
             <Route exact path="/" component={Landing}></Route>

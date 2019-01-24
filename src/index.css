@@ -412,7 +412,7 @@ header {
   left: 0;
   z-index: 40;
   min-height: 40px;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   color: var(--color-white);
   background-color: rgba(50, 50, 50, 1);
 }
@@ -444,6 +444,8 @@ header nav {
   font-family: 'Cinzel', serif;
   background-color: hsla(0,0%,0%,0.1);
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 header.open nav {
@@ -458,6 +460,27 @@ header a {
   color: var(--color-white);
 }
 
+header .threeD {
+  position: inline-block;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  background-color: rgba(250,250,250,.9);
+  border-radius: 100%;
+  padding: .25rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+header .threeD.sm-screens {
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
+}
+
+header .threeD.lg-screens {
+  font-size: .75rem;
+}
+
 /*============-============-============
               HAMBURGER MENU
 ==============-============-==========*/
@@ -468,7 +491,7 @@ header a {
   right: 0;
   z-index: 30;
   height: 25px;
-  padding: 0;
+  padding: 0 1rem 0 0;
   background: none;
   border: none;
   outline: none;
@@ -1000,6 +1023,9 @@ main h2 {
     transition: height 500ms;
     will-change: height;
   }
+  header .threeD.lg-screens {
+    display: none;
+  }
 }
 
 @media (min-width: 768px ) {
@@ -1021,6 +1047,9 @@ main h2 {
   header .logo,
   header .nav-wrapper {
     display: inline-block;
+  }
+  header .threeD.sm-screens {
+    display: none;
   }
   header nav {
     background-color: rgba(50, 50, 50, 1); 
@@ -1062,6 +1091,9 @@ main h2 {
 @media (min-width: 980px ) {
   header .logo h1 {
     font-size: 1.8rem;
+  }
+  header .threeD.lg-screens {
+    font-size: .9rem;
   }
   nav a {
     font-size: 1.2rem;

@@ -7,7 +7,7 @@ const Portfolio = () => {
 
   return (
     <Consumer>
-      { ({ projects }) => {
+      { ({ projects, threeD, actions }) => {
         return (
           <div className="page">
             <main className="portfolio">
