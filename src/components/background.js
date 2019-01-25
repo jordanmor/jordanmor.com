@@ -3,9 +3,11 @@ import React from 'react';
 const Background = () => {
   return ( 
     <div className="stars-wrapper">
-      <div id="stars1"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+      <div className="stars-container">
+        <div className="stars1"></div>
+        <div className="stars2"></div>
+        <div className="stars3"></div>
+      </div>
     </div>
    );
 }

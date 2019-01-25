@@ -1051,10 +1051,13 @@ main h2 {
   }
 }
 
-@media (min-width: 741px ) {
+@media (min-width: 741px ) and (min-height: 949px) {
   .landing {
     margin-top: 11.5rem;
   }
+}
+
+@media (min-width: 741px ) {
   .landing .title {
     font-size: 3.2rem;
   }
@@ -1157,6 +1160,12 @@ main h2 {
   }
 }
 
+@media (min-width: 980px ) and (min-height: 1049px) {
+  .landing {
+    margin-top: 14rem;
+  }
+}
+
 @media (min-width: 980px ) {
   header .logo h1 {
     font-size: 1.8rem;
@@ -1166,9 +1175,6 @@ main h2 {
   }
   nav a {
     font-size: 1.2rem;
-  }
-  .landing {
-    margin-top: 14rem;
   }
   .project .container {
     padding: 1rem 2rem;
