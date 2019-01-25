@@ -197,7 +197,7 @@ ul {
 }
 
 .card h1 {
-  margin: .5rem 0 1rem;
+  margin: 0 0 1rem;
   color: var(--color-secondary);
   font-size: 1.4rem;
 }
@@ -565,7 +565,7 @@ header.open .menu-lines::after {
 
 .links-project-wrapper {
   position: relative;
-  max-width: 1200px;
+  max-width: 1281px;
   margin: 0 auto;
 }
 
@@ -692,7 +692,10 @@ main h2 {
                 PORTFOLIO
 ==============-============-==========*/
 
-.portfolio,
+.portfolio {
+  padding: 6.2rem 1rem 0;
+}
+
 .portfolio-3D {
   padding: 7.2rem 1rem 0;
 }
@@ -728,6 +731,15 @@ main h2 {
   max-width: 100%;
 }
 
+/* .portfolio li {
+  transition: all .5s ease-out
+}
+
+.portfolio li:hover {
+  perspective: 1000px;
+  transform: rotateY(180deg);
+} */
+
 /*============-============-============
                  PROJECTS
 ==============-============-==========*/
@@ -737,7 +749,7 @@ main h2 {
 }
 
 .project {
-  max-width: 1200px;
+  max-width: 1281px;
   margin: 0 auto;
 }
 
