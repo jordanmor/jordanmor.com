@@ -1,4 +1,5 @@
 import React from 'react';
+import { Consumer } from './Context';
 import { Link } from 'react-router-dom';
 import SocialIcons from './common/socialIcons';
 
@@ -12,8 +13,21 @@ const Landing = () => {
         <SocialIcons />
         
         <div className="btn-group">
-          <Link to="/portfolio" className="btn"><span>Portfolio</span><i className="shine"></i></Link>
-          <Link to="/about" className="btn"><span>About Me</span><i className="shine two"></i></Link>
+          <Consumer>
+            {({ threeD }) => {
+              return (
+                <Link to={threeD ? "/portfolio-3D" : "/portfolio"} className="btn">
+                  <span>Portfolio</span>
+                  <i className="shine"></i>
+                </Link>
+              );
+            }}
+          </Consumer>
+          
+          <Link to="/about" className="btn">
+            <span>About Me</span>
+            <i className="shine two"></i>
+          </Link>
         </div>
       </div>
     </div>

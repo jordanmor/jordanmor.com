@@ -410,7 +410,6 @@ header {
   left: 0;
   z-index: 40;
   min-height: 40px;
-  /* padding: 0 1rem; */
   color: var(--color-white);
   background-color: rgba(50, 50, 50, 1);
 }
@@ -599,6 +598,59 @@ header.open .menu-lines::after {
 }
 
 /*============-============-============
+                 FLIPPER
+==============-============-==========*/
+
+.flip-container {
+  perspective: 1000px;
+  transition: all .5s ease-out;
+}
+
+.flipper {
+	position: relative;
+  transition: transform 1s cubic-bezier(.55, -.62, .27, 1.2);
+  transform-style: preserve-3d;
+}
+
+.flipper:hover {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.flipper .front,
+.flipper .back {
+  backface-visibility: hidden;
+}
+
+.flipper .back {
+	position: absolute;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotateY(180deg);
+}
+
+/* -- Photo Description -- */
+
+.photo-desc {
+  font-size: var(--cube-font-size);
+	color: #fff;
+	padding: var(--cube-desc-padding);
+  background: #345d88;
+  text-align: center;
+}
+
+.photo-desc h3 {
+  margin: 0;
+  padding: 0 0 1.5rem;
+  font-size: 110%;
+}
+
+.photo-desc .btn-secondary {
+  font-size: 75%;
+}
+
+/*============-============-============
                   CUBES
 ==============-============-==========*/
 
@@ -614,12 +666,6 @@ header.open .menu-lines::after {
 	height: var(--size-cube);
 	transition: transform 1.2s ease-in-out;
   transform-style: preserve-3d;
-}
-
-.photo-cube:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
 }
 
 .photo-cube:hover {
@@ -654,20 +700,12 @@ header.open .menu-lines::after {
 	transform: translateZ(calc(var(--size-cube) / -2)) rotateY(180deg);
 }
 
-.photo-desc {
-  font-size: var(--cube-font-size);
-	color: #fff;
-	padding: var(--cube-desc-padding);
-	background: #345d88;
+.photo-cube .photo-desc h3 {
+  padding-bottom: 1rem;
+  font-size: 95%;
 }
 
-.photo-desc h3 {
-  margin: 0;
-  padding: 0 0 1rem;
-  font-size: 100%;
-}
-
-.photo-desc .btn-secondary {
+.photo-cube .photo-desc .btn-secondary {
   font-size: 65%;
 }
 
@@ -700,20 +738,8 @@ main h2 {
   padding: 7.2rem 1rem 0;
 }
 
-.portfolio ul {
-  max-width: 1281px;
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  grid-template-rows: auto;
-  grid-gap: 1rem;
-  justify-items: center;
-  align-content: center;
-  justify-content: space-evenly;
-  margin: 0 auto 3rem;
-}
-
+.portfolio ul,
 .portfolio-3D ul {
-  max-width: var(--max-width);
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
   grid-template-rows: auto;
@@ -724,21 +750,21 @@ main h2 {
   margin: 0 auto;
 }
 
+.portfolio ul {
+  max-width: 1281px;
+  margin-bottom: 3rem;
+}
+
+.portfolio-3D ul {
+  max-width: var(--max-width);
+}
+
 .portfolio img,
 .portfolio-3D img {
   display: block;
   border-radius: 5px;
   max-width: 100%;
 }
-
-/* .portfolio li {
-  transition: all .5s ease-out
-}
-
-.portfolio li:hover {
-  perspective: 1000px;
-  transform: rotateY(180deg);
-} */
 
 /*============-============-============
                  PROJECTS

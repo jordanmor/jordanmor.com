@@ -7,10 +7,17 @@ const PortfolioItem = ({ project }) => {
 
   return (
     <React.Fragment>
-      <li>
-        <Link to={`/portfolio/project/${id}`}>
-          <img src={process.env.PUBLIC_URL + image_urls[0]} alt={project_name}/>
-        </Link>
+      <li className="flip-container">
+        <div className="flipper">
+          <div className="front">
+            <img src={process.env.PUBLIC_URL + image_urls[0]} alt={project_name}/>
+          </div>
+          <div className="back photo-desc">
+            <h3>{project_name}</h3>
+            {/* <p>Aenean lacinia bibendu</p> */}
+            <Link className="btn-secondary" to={`/portfolio/project/${id}`}>View Project</Link>
+          </div>
+        </div>
       </li>
     </React.Fragment>
   );
