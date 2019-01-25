@@ -18,8 +18,8 @@ export class Provider extends Component {
     this.setState({ menuIsOpen: false });
   }
 
-  togglePortfolioBtn = () => {
-    this.setState( prevState => ({ threeD: !prevState.threeD }));
+  toggle3D = async() => {
+    await this.setState( prevState => ({ threeD: !prevState.threeD }));
   }
 
   render() { 
@@ -31,7 +31,7 @@ export class Provider extends Component {
         actions: {
           toggleMenu: this.toggleMenu,
           closeMenu: this.closeMenu,
-          togglePortfolioBtn: this.togglePortfolioBtn
+          toggle3D: this.toggle3D
         }
       }}>
         { this.props.children }

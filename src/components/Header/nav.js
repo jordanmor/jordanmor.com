@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ThreeDButton from './threeDBtn';
 
-const Nav = ({ closeMenu, path, togglePortfolioBtn }) => {
+const Nav = ({ closeMenu, threeD, path }) => {
   return ( 
     <div className="nav-wrapper">
       <nav>
@@ -10,7 +10,7 @@ const Nav = ({ closeMenu, path, togglePortfolioBtn }) => {
           path={path}
           classNames="threeD lg-screens"
         />
-        <NavLink onClick={ closeMenu } to="/portfolio">Portfolio</NavLink>
+        <NavLink onClick={ closeMenu } to={threeD ? "/portfolio-3D" : "/portfolio"}>Portfolio</NavLink>
         <NavLink onClick={ closeMenu } to="/about">About Me</NavLink>
         <NavLink onClick={ closeMenu } to="/contact">Contact Me</NavLink>
       </nav>

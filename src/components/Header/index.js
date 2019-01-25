@@ -19,11 +19,11 @@ const Header = ({ path }) => {
 
   return (
     <Consumer>
-      { ({ menuIsOpen, actions }) => {
+      { ({ menuIsOpen, threeD, actions }) => {
         return ( 
           <div className={classNames} >
             <header className={ menuIsOpen ? "open" : null }>
-              <div>
+              <div className={threeD && path.includes("/portfolio-3D")? "threeD-fixed" : null}>
                 <ThreeDButton 
                   path={path}
                   classNames="threeD sm-screens"
@@ -36,8 +36,9 @@ const Header = ({ path }) => {
 
                 <Nav 
                   closeMenu={actions.closeMenu}
-                  togglePortfolioBtn={actions.togglePortfolioBtn}
+                  toggle3D={actions.toggle3D}
                   path={path}
+                  threeD={threeD}
                 />
               </div>
             </header>

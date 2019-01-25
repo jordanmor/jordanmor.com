@@ -4,6 +4,7 @@ import Background from './background';
 import Landing from './landing';
 import Header from './Header';
 import Portfolio from './Portfolio';
+import Portfolio3D from './Portfolio/portfolio3D';
 import About from './About';
 import Contact from './Contact';
 import Project from './Project';
@@ -34,7 +35,8 @@ const App = ({ location }) => {
               path='/portfolio/project/:id'
               render={ props => <Project {...props} /> }> 
             </Route>
-            <Route path='/portfolio' component={Portfolio}></Route>
+            <Route exact path='/portfolio' component={Portfolio}></Route>
+            <Route exact path='/portfolio-3D' component={Portfolio3D}></Route>
             <Route exaxt path='/about' component={About}></Route>
             <Route exaxt path='/contact' component={Contact}></Route>
             <Route exact path="/" component={Landing}></Route>
