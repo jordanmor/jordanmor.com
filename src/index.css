@@ -434,6 +434,14 @@ header > div {
   left: 2rem;
 }
 
+.threeD {
+  transition: all .3s ease;
+}
+
+.threeD:hover {
+  box-shadow: 0 0 .17rem .17rem rgba(255, 255, 255, 0.8);
+}
+
 header .logo {
   z-index: 30;
   padding: 4px 0;
