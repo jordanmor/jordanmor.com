@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 const CarouselResponsive = ({ images, description}) => (
   <React.Fragment>
     <MediaQuery maxWidth={740}>
-      <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+      <Carousel className="carousel-container carousel-mobile" showThumbs={false} showStatus={false} autoPlay interval={5000} infiniteLoop={true} >
         {images.map((image, index) => (
           <div key={index} >
             <img 
@@ -18,7 +18,7 @@ const CarouselResponsive = ({ images, description}) => (
       </Carousel>
     </MediaQuery>
     <MediaQuery minWidth={741}>
-      <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={8000} infiniteLoop={true} >
+      <Carousel className="carousel-container carousel-desktop" showThumbs={false} showStatus={false} autoPlay interval={5000} infiniteLoop={true} >
         {images.map((image, index) => (
           <div key={index} >
             <img 

@@ -10,14 +10,14 @@ const PortfolioItem3D = ({ project }) => {
       <li className="cube-container">
         <div className="photo-cube">
 
-          <img className="front"src={process.env.PUBLIC_URL + image_urls[0]} alt={project_name} />
-          <div className="back photo-desc">
+          <img className="side front"src={process.env.PUBLIC_URL + image_urls[0]} alt={project_name} />
+          <div className="side back photo-desc">
             <h3>{project_name}</h3>
             {/* <p>Aenean lacinia bibendu</p> */}
             <Link className="btn-secondary" to={`/portfolio/project/${id}`}>View Project</Link>
           </div>
-          <img className="left" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-2.png` }  alt={project_name} />
-          <img className="right" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-3.png` } alt={project_name} />
+          <img className="side left" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-2.png` }  alt={project_name} />
+          <img className="side right" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-3.png` } alt={project_name} />
 
         </div>
       </li>
