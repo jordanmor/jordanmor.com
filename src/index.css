@@ -480,6 +480,21 @@ header a {
   color: var(--color-white);
 }
 
+header .main-link {
+  border-radius: 4px;
+  padding: .15rem;
+  transition: box-shadow .3s ease;
+}
+
+header .main-link.active {
+  transition: none;
+  cursor: default;
+}
+
+header .main-link:not(.active):hover {
+  box-shadow: 0 0 14px 14px rgba(255,255,255,0.3) inset;
+}
+
 header .threeD {
   position: inline-block;
   font-family: "Roboto", "Helvetica Neue", sans-serif;

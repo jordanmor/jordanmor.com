@@ -10,9 +10,9 @@ const Nav = ({ closeMenu, threeD, path }) => {
           path={path}
           classNames="threeD lg-screens"
         />
-        <NavLink onClick={ closeMenu } to={threeD ? "/portfolio-3D" : "/portfolio"}>Portfolio</NavLink>
-        <NavLink onClick={ closeMenu } to="/about">About Me</NavLink>
-        <NavLink onClick={ closeMenu } to="/contact">Contact Me</NavLink>
+        <NavLink className="main-link" onClick={ closeMenu } to={threeD ? "/portfolio-3D" : "/portfolio"}>Portfolio</NavLink>
+        <NavLink className="main-link" onClick={ closeMenu } to="/about">About Me</NavLink>
+        <NavLink className="main-link" onClick={ closeMenu } to="/contact">Contact Me</NavLink>
       </nav>
     </div>
    );
