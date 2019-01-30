@@ -251,13 +251,19 @@ ul {
   margin-bottom: 1rem;
 }
 
+.carousel .slide img {
+  border-radius: 0;
+}
+
 .carousel .slide {
-  background-color: var(--color-off-white);
+  /* background-color: var(--color-off-white); */
+  background-color: transparent;
 }
 
 .carousel-slider {
-  border-radius: 4px;
+  border-radius: 6px;
   z-index: 1;
+  overflow: hidden;
 }
 
 /*============-============-============
@@ -1259,19 +1265,28 @@ main h2 {
     font-weight: bold;
   }
   .links-project {
-    top: 6rem;
+    z-index: 10;
+    top: 6.7rem;
+  }
+  .links-project .btn:first-child {
+    margin-left: 2.8rem;
+  }
+  .links-project .btn:last-child {
+    margin-right: 2.8rem;
   }
   .portfolio {
     padding-left: 2rem;
     padding-right: 2rem;
   }
- 
   .portfolio-3D {
     padding-left: 0;
     padding-right: 0;
   }
   .project-wrapper {
-    padding: 9.5rem 2rem 0;
+    padding: 5.5rem 2rem 0;
+  }
+  .project .container {
+    padding: 1rem 2rem;
   }
   .about-wrapper {
     padding-top: 5rem;
@@ -1306,9 +1321,6 @@ main h2 {
   }
   nav a {
     font-size: 1.2rem;
-  }
-  .project .container {
-    padding: 1rem 2rem;
   }
   .project .card .main-text {
     width: 75%;
