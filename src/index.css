@@ -901,6 +901,12 @@ main h2 {
   background-color: var(--color-secondary);
   border: 1px solid var(--color-secondary);
   opacity: .95;
+  transition: all .3s ease;
+}
+
+.links-external .btn:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-transparent-light);
 }
 
 /* -- Project Links -- */
