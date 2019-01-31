@@ -17,8 +17,8 @@ const Card = ({ project, images, match }) => {
         <div className="description">
           <p className="main-text">{project.description}</p>
           <div className="links-external">
-            {project.live_link && <a href={project.live_link} className="btn">Live Demo</a>}
-            <a href={project.github_link} className="btn">Github Repo</a>
+            {project.live_link && <a href={project.live_link} rel="noopener noreferrer" target="_blank" className="btn">Live Demo</a>}
+            <a href={project.github_link} rel="noopener noreferrer" target="_blank" className="btn">Github Repo</a>
           </div>
         </div>
 
