@@ -4,7 +4,7 @@ import Card from './card';
 import Technologies from '../common/technologies';
 import Footer from '../footer';
 
-const Project = ({ match }) => {
+const Project = ({ match, menuIsOpen }) => {
   return (
     <div className="page">
       <Consumer>
@@ -19,6 +19,8 @@ const Project = ({ match }) => {
                 <Card 
                   project={project}
                   images={images}
+                  match={match}
+                  menuIsOpen={menuIsOpen}
                 />
 
                 <Technologies 

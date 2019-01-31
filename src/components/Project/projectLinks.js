@@ -2,16 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Consumer } from '../Context';
 
-const ProjectLinks = ({ path }) => {
-
-  if (!path.includes('/portfolio/project')) return null;
+const ProjectLinks = ({ match }) => {
+  // console.log(match);
+  // if (!path.includes('/portfolio/project')) return null;
 
   return ( 
     <Consumer>
-      { ({ projects, menuIsOpen }) => {
-        // extract current project id from url
-        const projectID = path.match(/\/portfolio\/project\/(.+)/)[1];
-        const project = projects.filter(project => project.id === projectID)[0];
+      { ({ projects }) => {
+        const project = projects.filter(project => project.id === match.params.id)[0];
         
         let prevProjectID = '', nextProjectID = '';
         const projectIndex = projects.indexOf(project);
@@ -29,7 +27,7 @@ const ProjectLinks = ({ path }) => {
         
         return ( 
           <div className="links-project-wrapper">
-            <div className={menuIsOpen ? "links-project hide" : "links-project"}>
+            <div className="links-project">
               <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
               <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
             </div>

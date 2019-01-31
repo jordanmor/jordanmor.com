@@ -1,9 +1,11 @@
 import React from 'react';
 import CarouselResponsive from '../common/carouselResponsive';
+import ProjectLinks from './projectLinks';
 
-const Card = ({ project, images }) => {
+const Card = ({ project, images, match }) => {
   return ( 
     <div className="card">
+      <ProjectLinks match={match} />
       <div className="container">
         <h1>{project.project_name}</h1>
 
