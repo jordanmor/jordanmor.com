@@ -496,6 +496,7 @@ header .main-link {
 }
 
 header .main-link.active {
+  pointer-events: none;
   transition: none;
   cursor: default;
 }
