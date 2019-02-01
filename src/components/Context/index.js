@@ -15,7 +15,9 @@ export class Provider extends Component {
   }
 
   closeMenu = () => {
-    this.setState({ menuIsOpen: false });
+    if(this.state.menuIsOpen) {
+      this.setState({ menuIsOpen: false });
+    }
   }
 
   toggle3D = async() => {

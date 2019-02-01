@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import { Consumer } from '../Context';
 
 const ProjectLinks = ({ match }) => {
-  // console.log(match);
-  // if (!path.includes('/portfolio/project')) return null;
-
   return ( 
     <Consumer>
-      { ({ projects }) => {
+      { ({ projects, actions }) => {
         const project = projects.filter(project => project.id === match.params.id)[0];
         
         let prevProjectID = '', nextProjectID = '';
@@ -28,8 +25,8 @@ const ProjectLinks = ({ match }) => {
         return ( 
           <div className="links-project-wrapper">
             <div className="links-project">
-              <Link to={`/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
-              <Link to={`/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+              <Link to={`/project/${prevProjectID}`} onClick={ actions.closeMenu } className="btn">⇐ Prev Project</Link>
+              <Link to={`/project/${nextProjectID}`} onClick={ actions.closeMenu } className="btn">Next Project ⇒</Link>
             </div>
           </div>
         );

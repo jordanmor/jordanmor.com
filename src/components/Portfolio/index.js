@@ -7,7 +7,7 @@ const Portfolio = () => {
 
   return (
     <Consumer>
-      { ({ projects }) => {
+      { ({ projects, actions }) => {
         return (
           <div className="page">
             <main className="portfolio">
@@ -17,6 +17,7 @@ const Portfolio = () => {
                     <PortfolioItem
                       key={project.id}
                       project={project}
+                      closeMenu={actions.closeMenu}
                     />
                   ))}
                 </ul>

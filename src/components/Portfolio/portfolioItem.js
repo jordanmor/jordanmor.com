@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PortfolioItem = ({ project }) => {
+const PortfolioItem = ({ project, closeMenu }) => {
 
   const {id, image_urls, project_name } = project;
 
@@ -15,7 +15,7 @@ const PortfolioItem = ({ project }) => {
           <div className="back photo-desc">
             <h3>{project_name}</h3>
             {/* <p>Aenean lacinia bibendu</p> */}
-            <Link className="btn-secondary" to={`/project/${id}`}>View Project</Link>
+            <Link className="btn-secondary" onClick={ closeMenu } to={`/project/${id}`}>View Project</Link>
           </div>
         </div>
       </li>
