@@ -15,7 +15,7 @@ const PortfolioItem = ({ project }) => {
           <div className="back photo-desc">
             <h3>{project_name}</h3>
             {/* <p>Aenean lacinia bibendu</p> */}
-            <Link className="btn-secondary" to={`/portfolio/project/${id}`}>View Project</Link>
+            <Link className="btn-secondary" to={`/project/${id}`}>View Project</Link>
           </div>
         </div>
       </li>

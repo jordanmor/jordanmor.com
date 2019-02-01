@@ -228,7 +228,7 @@ ul {
 .card .lead {
   font-family: 'Cinzel', serif;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0 0 .75rem;
 }
@@ -479,6 +479,10 @@ header.open nav {
 
 header nav a {
   display: inline-block;
+}
+
+header nav a.active {
+  font-weight: bold;
 }
 
 header a {
@@ -1285,9 +1289,6 @@ main h2 {
   }
   header nav a + a {
     margin-left: 1rem;
-  }
-  header nav a.active {
-    font-weight: bold;
   }
   .links-project {
     z-index: 10;

@@ -28,8 +28,8 @@ const ProjectLinks = ({ match }) => {
         return ( 
           <div className="links-project-wrapper">
             <div className="links-project">
-              <Link to={`/portfolio/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
-              <Link to={`/portfolio/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
+              <Link to={`/project/${prevProjectID}`} className="btn">⇐ Prev Project</Link>
+              <Link to={`/project/${nextProjectID}`} className="btn">Next Project ⇒</Link>
             </div>
           </div>
         );

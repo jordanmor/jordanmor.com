@@ -32,7 +32,7 @@ const App = ({ location }) => {
         >
           <Switch location={location}>
             <Route 
-              path='/portfolio/project/:id'
+              path='/project/:id'
               render={ props => <Project {...props} /> }> 
             </Route>
             <Route exact path='/portfolio' component={Portfolio}></Route>
