@@ -740,7 +740,7 @@ header.open .menu-lines::after {
 }
 
 .photo-cube .back {
-	transform: translateZ(calc(var(--size-cube) / -2)) rotateY(270deg);
+  transform: translateZ(calc(var(--size-cube) / -2)) rotateY(270deg);
 	transform-origin: center left;
 }
 

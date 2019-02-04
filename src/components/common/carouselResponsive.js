@@ -11,7 +11,7 @@ const CarouselResponsive = ({ images, description}) => (
         {images.map((image, index) => (
           <div key={index} >
             <img 
-              src={`${image.match(/\/images\/.+\/project/g)[0]}-mobile-${index + 1}.png` } 
+              src={`${process.env.PUBLIC_URL}${image.match(/\/images\/.+\/project/g)[0]}-mobile-${index + 1}.png` } 
               alt={description} />
           </div>
         ))}
@@ -22,7 +22,7 @@ const CarouselResponsive = ({ images, description}) => (
         {images.map((image, index) => (
           <div key={index} >
             <img 
-              src={image}
+              src={process.env.PUBLIC_URL + image}
               alt={description} />
           </div>
         ))}

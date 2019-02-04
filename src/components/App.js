@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Switch, Route } from 'react-router-dom';
+import { withRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Background from './background';
 import Landing from './landing';
 import Header from './Header';
@@ -40,6 +40,7 @@ const App = ({ location }) => {
             <Route exaxt path='/about' component={About}></Route>
             <Route exaxt path='/contact' component={Contact}></Route>
             <Route exact path="/" component={Landing}></Route>
+            <Redirect to="/" />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
