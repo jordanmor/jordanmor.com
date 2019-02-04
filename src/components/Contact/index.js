@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './card';
+import Button from './button';
 
 const Contact = () => {
 
@@ -17,7 +17,7 @@ const Contact = () => {
           <h1>Contact Me</h1>
           <ul>
             {contacts.map( (contact, index) => (
-              <Card 
+              <Button 
                 key={index}
                 title={contact.title} 
                 icon={contact.icon}
