@@ -1168,9 +1168,6 @@ main h2 {
 }
 
 @media (min-width: 550px ) {
-  .contact-wrapper {
-    padding-top: 6rem;
-  }
   .contact ul {
     grid-gap: 2rem;
   }
@@ -1198,6 +1195,9 @@ main h2 {
 @media (min-width: 741px ) and (min-height: 949px) {
   .landing {
     margin-top: 11.5rem;
+  }
+  .contact-wrapper {
+    padding-top: 7rem;
   }
 }
 
@@ -1327,9 +1327,6 @@ main h2 {
   .about-wrapper {
     padding-top: 5rem;
   }
-  .contact-wrapper {
-    padding-top: 7rem;
-  }
   .contact h1 {
     font-size: 1.8rem;
     margin-bottom: 3rem;
@@ -1352,6 +1349,9 @@ main h2 {
   .landing {
     margin-top: 14rem;
   }
+  .contact-wrapper {
+    padding-top: 8rem;
+  }
 }
 
 @media (min-width: 980px ) {
@@ -1367,9 +1367,6 @@ main h2 {
   .project .card .main-text {
     width: 75%;
     margin: 1rem auto;
-  }
-  .contact-wrapper {
-    padding-top: 8rem;
   }
   .contact h1 {
     font-size: 2.2rem;
