@@ -16,8 +16,8 @@ const PortfolioItem3D = ({ project, closeMenu }) => {
             {/* <p>Aenean lacinia bibendu</p> */}
             <Link className="btn-secondary" onClick={ closeMenu } to={`/project/${id}`}>View Project</Link>
           </div>
-          <img className="side left" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-2.png` }  alt={project_name} />
-          <img className="side right" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-mobile-3.png` } alt={project_name} />
+          <img className="side left" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-cube-1.png` }  alt={project_name} />
+          <img className="side right" src={process.env.PUBLIC_URL + `${image_urls[1].match(/\/images\/.+\/project/g)[0]}-cube-2.png` } alt={project_name} />
 
         </div>
       </li>

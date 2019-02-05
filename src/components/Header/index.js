@@ -5,7 +5,6 @@ import Nav from './nav';
 import MenuButton from './menuButton';
 import Logo from './logo';
 import ThreeDButton from './threeDBtn';
-// import ProjectLinks from '../Project/projectLinks';
 
 const Header = ({ path }) => {
   let classNames = '';
@@ -53,8 +52,6 @@ const Header = ({ path }) => {
               </div>
             </header>
             
-            {/* <ProjectLinks path={path} menuIsOpen={menuIsOpen} /> */}
-
           </div>
         );
       }}
