@@ -293,6 +293,7 @@ ul {
 }
 
 .technologies .icon {
+  height: 60px;
   align-self: center;
 }
 
@@ -301,6 +302,10 @@ ul {
   font-size: .8rem;
   font-weight: bold;
   text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .technologies svg {
