@@ -281,36 +281,31 @@ ul {
   justify-items: center;
   align-items: center;
   justify-content: space-between;
-  grid-gap: 2rem;
+  grid-gap: 1rem 2rem;
 }
 
 .technologies li {
   position: relative;
-  height: 100px;
+  height: 110px;
   width: 75px;
   display: flex;
   flex-direction: column;
 }
 
 .technologies .icon {
-  flex-basis: 70%;
-  width: 100%;
   align-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .technologies .name {
-  flex-basis: 30%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: .8rem;
   font-weight: bold;
   text-align: center;
+}
+
+.technologies svg {
+  width: 60px;
+  height: 60px;
 }
 
 /*============-============-============
