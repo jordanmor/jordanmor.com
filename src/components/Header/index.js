@@ -17,17 +17,27 @@ const Header = ({ path }) => {
     classNames = 'header-wrapper-in fade-in';
   }
 
+  // Internet Explorer 6-11
+  const isIE = /*@cc_on!@*/false || !!document.documentMode;
+  // Edge 20+
+  const isEdge = !isIE && !!window.StyleMedia;
+
   return (
     <Consumer>
       { ({ menuIsOpen, threeD, actions }) => {
         return ( 
           <div className={classNames} >
             <header className={ menuIsOpen ? "open" : null }>
-              <div className={threeD && path.includes("/portfolio-3D")? "threeD-fixed" : null}>
-                <ThreeDButton 
-                  path={path}
-                  classNames="threeD sm-screens"
-                />
+              <div className={threeD && path.includes("/portfolio-3D") ? "threeD-fixed" : null}>
+                {!isIE && !isEdge 
+                  ? 
+                    <ThreeDButton 
+                    path={path}
+                    classNames="threeD sm-screens"
+                    />
+                  :
+                    null
+                }
                 <Logo closeMenu={actions.closeMenu} />
 
                 <MediaQuery maxWidth={768}>
