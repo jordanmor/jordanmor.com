@@ -2,4 +2,4 @@
 
 My personal portfolio site built with React, CSS Grid & Flexbox.
 
-http://www.jordanmor.com
+https://www.jordanmor.com
