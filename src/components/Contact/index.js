@@ -14,7 +14,7 @@ const Contact = () => {
     <div className="page">
       <main className="contact-wrapper">
         <div className="contact">
-          <h1>Contact Me</h1>
+          <h1>Contact</h1>
           <ul>
             {contacts.map( (contact, index) => (
               <Button 

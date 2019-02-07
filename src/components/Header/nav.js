@@ -11,8 +11,8 @@ const Nav = ({ closeMenu, threeD, path }) => {
           classNames="threeD lg-screens"
         />
         <NavLink className="main-link" onClick={ closeMenu } to={threeD ? "/portfolio-3D" : "/portfolio"}>Portfolio</NavLink>
-        <NavLink className="main-link" onClick={ closeMenu } to="/about">About Me</NavLink>
-        <NavLink className="main-link" onClick={ closeMenu } to="/contact">Contact Me</NavLink>
+        <NavLink className="main-link" onClick={ closeMenu } to="/about">About</NavLink>
+        <NavLink className="main-link" onClick={ closeMenu } to="/contact">Contact</NavLink>
       </nav>
     </div>
    );

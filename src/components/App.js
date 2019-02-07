@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Background from './background';
 import Landing from './landing';
 import Header from './Header';
@@ -18,7 +18,8 @@ import {
 
 library.add(fab, faEnvelope); // make font-awesome brand icons available to components
 
-const App = ({ location }) => {
+const App = ({ history }) => {
+  const { location } = history;
   return (
     <React.Fragment>
       <Background />
@@ -29,24 +30,24 @@ const App = ({ location }) => {
             key={location.key}
             timeout={450}
             classNames="fade"
-        >
-          <Switch location={location}>
-            <Route 
-              path='/project/:id'
-              render={ props => <Project {...props} /> }> 
-            </Route>
-            <Route exact path='/portfolio' component={Portfolio}></Route>
-            <Route exact path='/portfolio-3D' component={Portfolio3D}></Route>
-            <Route exaxt path='/about' component={About}></Route>
-            <Route exaxt path='/contact' component={Contact}></Route>
-            <Route exact path="/" component={Landing}></Route>
-            <Redirect to="/" />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-    )} />
+          >
+            <Switch location={location}>
+              <Route 
+                path='/project/:id'
+                render={ props => <Project {...props} /> }> 
+              </Route>
+              <Route exact path='/portfolio' component={Portfolio}></Route>
+              <Route exact path='/portfolio-3D' component={Portfolio3D}></Route>
+              <Route exaxt path='/about' component={About}></Route>
+              <Route exaxt path='/contact' component={Contact}></Route>
+              <Route exact path="/" component={Landing}></Route>
+              <Redirect to="/" />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      )} />
     </React.Fragment>
   );
 }
 
-export default withRouter(App);
+export default App;
