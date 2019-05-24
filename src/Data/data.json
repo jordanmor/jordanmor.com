@@ -3,8 +3,8 @@
     {
       "id": "twitter-gifs",
       "project_name": "Twitter Gifs",
-      "description": "The latest Twitter trends matched with gifs",
-      "technologies": ["React", "JavaScript", "NodeJS", "Express", "MongoDB", "Mongoose", "REST" ,"Bootstrap"],
+      "description": "A web app that matches GIFs with the latest Twitter trends using React and Bootstrap to create a mobile-first, responsive front end as well as NodeJS, Express and MongoDB to create a robust back end utilizing NodeJS passport authorization middleware and the Twitter, GIPHY & Wordnik APIs.",
+      "technologies": ["React", "JavaScript", "NodeJS", "Express", "MongoDB", "Mongoose", "REST" ,"Bootstrap", "Responsive Web Design", "Gulp"],
       "live_link": "https://twittergifs.herokuapp.com",
       "github_link": "https://github.com/jordanmor/twitter-gifs",
       "image_urls": ["/images/twitter-gifs/project-main.png", "/images/twitter-gifs/project-1.png", "/images/twitter-gifs/project-2.png", "/images/twitter-gifs/project-3.png", "/images/twitter-gifs/project-4.png", "/images/twitter-gifs/project-5.png"],
