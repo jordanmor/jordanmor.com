@@ -21,7 +21,7 @@ const About = () => {
 
           <Technologies 
             technologies={svgArray}
-            title="Skills"
+            title="Skills / Technologies Used"
           />
 
           <Technologies 

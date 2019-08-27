@@ -11,8 +11,10 @@ const Card = () => {
           <img src={profileImg} alt="Jordan Mor" />
           <div className="description">
             <h2>Jordan Mor</h2>
-            <p className="lead">JavaScript-focused <span>front-end Developer</span> <span>with additional back-end skills</span></p>
-            <p className="main-text">Hi! I'm a software developer who loves building web-based applications. I'm currently concentrating on using the MERN (MongoDB, Express, React, Node.js) stack, though I have experience building web apps with SQL databases as well. I'm also currently trying to incorporate CSS Grid & Flexbox into most of my projects, though I'm also comfortable using CSS frameworks such as Bootstrap. I'm a self-motivated, lifelong learner committed to constantly improving my skills and staying current on developments and trends in the industry.</p>
+            <p className="lead">Full Stack <span>Software Developer</span></p>
+            <p className="main-text">Hi! I'm a software developer who loves building web-based applications. 
+              Whether building a RESTful backend service with Java, Spring Boot and an SQL database, or Node.js, Express and MongoDB, or a frontend with
+              React or Angular, or even using a templating engine like Thymeleaf or Pug, I'm up to the challenge! I'm a self-motivated, lifelong learner committed to constantly improving my skills and staying current on developments and trends in the industry.</p>
           </div>
           <SocialIcons />
         </div>
