@@ -11,6 +11,16 @@
       "tags": ["latest, treehouse"]
     },
     {
+      "id": "vegas-dice-game",
+      "project_name": "Vegas Dice Game",
+      "description": "A craps game implemented mixing Spring Boot, RESTful web services, and a jQuery front end to create a complete solution that is deployed on Heroku and GitHub pages",
+      "technologies": ["Java", "Spring Boot", "REST", "SQL", "jQuery", "CSS3", "Responsive Web Design"],
+      "live_link": "https://jordanmor.github.io/vegas-dice-game",
+      "github_link": "https://github.com/jordanmor/vegas-dice-game",
+      "image_urls": ["/images/vegas-dice-game/project-main.png", "/images/vegas-dice-game/project-1.png", "/images/vegas-dice-game/project-2.png", "/images/vegas-dice-game/project-3.png", "/images/vegas-dice-game/project-4.png", "/images/vegas-dice-game/project-5.png"],
+      "tags": ["latest, tts"]
+    },
+    {
       "id": "interactive-gallery",
       "project_name": "Interactive Image Gallery",
       "description": "An interactive image gallery built with a responsive design approach, using React, CSS Grid & Flexbox, and utilizing Flickr's and Wordnik's APIs.",
